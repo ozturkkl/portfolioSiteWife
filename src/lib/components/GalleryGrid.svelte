@@ -89,7 +89,7 @@
 					type="button"
 					class={[
 						'block h-full w-full text-left',
-						isVideo(item) ? 'cursor-pointer' : 'cursor-zoom-in'
+						'cursor-pointer'
 					]}
 					onclick={() => openLightbox(index)}
 					aria-label={viewLabel(item)}

@@ -1,9 +1,8 @@
 <script lang="ts">
-	import CarouselEdgeButton from '$lib/components/CarouselEdgeButton.svelte';
 	import SwipeCarousel from '$lib/components/SwipeCarousel.svelte';
 	import type { MediaAsset } from '$lib/types/media';
 	import { isVideo } from '$lib/types/media';
-	import { carouselEdgeInset, lightboxEdgeChrome } from '$lib/utils/carousel-edge';
+	import { lightboxEdgeChrome } from '$lib/utils/carousel-edge';
 	import { staticSrc } from '$lib/utils/static-src';
 	import { isVideoControlInteraction, modIndex } from '$lib/utils/swipe-carousel';
 
@@ -39,7 +38,10 @@
 		if (!dialog) return;
 		if (isOpen) {
 			imageFailed = {};
-			if (!dialog.open) dialog.showModal();
+			if (!dialog.open) {
+				dialog.showModal();
+				(document.activeElement as HTMLElement | null)?.blur();
+			}
 		} else if (dialog.open) {
 			dialog.close();
 		}
@@ -138,7 +140,7 @@
 
 <dialog
 	bind:this={dialog}
-	class="lightbox fixed inset-0 z-50 m-0 h-full w-full max-h-none max-w-none cursor-zoom-out border-0 bg-black/95 p-0 backdrop:bg-black/95"
+	class="lightbox fixed inset-0 z-50 m-0 h-full w-full max-h-none max-w-none cursor-pointer border-0 bg-black/95 p-0 backdrop:bg-black/95 outline-none"
 	aria-label="Media viewer"
 	onclose={handleDialogClose}
 	onclick={handleBackdropClick}
@@ -147,7 +149,7 @@
 		<button
 			type="button"
 			class={[
-				'absolute top-0 right-0 z-30 grid h-20 w-20 place-items-center sm:h-24 sm:w-24',
+				'absolute top-0 right-0 z-30 grid h-20 w-20 place-items-center outline-none sm:h-24 sm:w-24',
 				lightboxEdgeChrome
 			]}
 			aria-label="Close"
@@ -169,20 +171,13 @@
 			</svg>
 		</button>
 
-		{#if multiple}
-			<CarouselEdgeButton direction="prev" variant="lightbox" scope="viewport" onclick={prev} />
-			<CarouselEdgeButton direction="next" variant="lightbox" scope="viewport" onclick={next} />
-		{/if}
-
-		<div
-			class={['relative h-full w-full', multiple ? carouselEdgeInset : 'px-0 sm:px-8']}
-			role="presentation"
-			onkeydown={(e) => e.stopPropagation()}
-		>
+		<div class={['relative h-full w-full', multiple ? '' : 'px-0 sm:px-8']} role="presentation" onkeydown={(e) => e.stopPropagation()}>
 			<SwipeCarousel
 				bind:this={carousel}
 				count={assets.length}
 				bind:index
+				edgeNav={multiple}
+				edgeVariant="lightbox"
 				{slide}
 				ontap={handleCarouselTap}
 				onswipedown={close}
@@ -208,7 +203,7 @@
 				<img
 					src={staticSrc(asset.src)}
 					alt={asset.alt}
-					class="max-h-full max-w-full cursor-zoom-out object-contain"
+					class="max-h-full max-w-full cursor-pointer object-contain"
 					decoding="async"
 					draggable="false"
 				/>
@@ -229,7 +224,7 @@
 			<img
 				src={imageFailed[assetIndex] ? staticSrc(asset.src) : asset.fullSrc}
 				alt={asset.alt}
-				class="max-h-full max-w-full cursor-zoom-out object-contain"
+				class="max-h-full max-w-full cursor-pointer object-contain"
 				decoding="async"
 				draggable="false"
 				onerror={() => handleImageError(assetIndex)}

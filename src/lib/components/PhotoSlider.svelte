@@ -1,5 +1,4 @@
 <script lang="ts">
-	import CarouselEdgeButton from '$lib/components/CarouselEdgeButton.svelte';
 	import Lightbox from '$lib/components/Lightbox.svelte';
 	import MediaThumb from '$lib/components/MediaThumb.svelte';
 	import SwipeCarousel from '$lib/components/SwipeCarousel.svelte';
@@ -65,7 +64,7 @@
 		class={[
 			'flex h-full w-full items-center justify-center',
 			carouselEdgeInset,
-			isVideo(asset) ? 'cursor-pointer' : 'cursor-zoom-in'
+			'cursor-pointer'
 		]}
 	>
 		<MediaThumb asset={asset} fit="contain" class="h-full w-full" />
@@ -75,10 +74,7 @@
 {#if assets.length > 0}
 	<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 	<div
-		class={[
-			'relative rounded-site focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
-			className
-		]}
+		class={['relative rounded-site outline-none', className]}
 		role={assets.length > 1 ? 'group' : undefined}
 		aria-label={assets.length > 1 ? `Photo slider, slide ${index + 1} of ${assets.length}` : undefined}
 		tabindex={assets.length > 1 ? 0 : undefined}
@@ -90,19 +86,16 @@
 					bind:this={carousel}
 					count={assets.length}
 					bind:index
+					edgeNav
+					edgeVariant="media"
 					{slide}
 					ontap={openLightbox}
 					class="h-full"
 				/>
-				<CarouselEdgeButton direction="prev" onclick={prev} />
-				<CarouselEdgeButton direction="next" onclick={next} />
 			{:else}
 				<button
 					type="button"
-					class={[
-						'flex h-full w-full items-center justify-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
-						isVideo(current) ? 'cursor-pointer' : 'cursor-zoom-in'
-					]}
+					class="flex h-full w-full cursor-pointer items-center justify-center outline-none"
 					onclick={openLightbox}
 					aria-label={viewLabel(current)}
 				>
