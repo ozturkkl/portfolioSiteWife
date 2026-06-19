@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ProgressiveFullImage from '$lib/components/ProgressiveFullImage.svelte';
 	import SwipeCarousel from '$lib/components/SwipeCarousel.svelte';
 	import type { MediaAsset } from '$lib/types/media';
 	import { isVideo } from '$lib/types/media';
@@ -21,6 +22,7 @@
 	let dialog = $state<HTMLDialogElement | null>(null);
 	let carousel = $state<SwipeCarousel | null>(null);
 	let imageFailed = $state<Record<number, boolean>>({});
+	let fullLoadedUrls = $state<Record<string, boolean>>({});
 	let wasClosed = $state(true);
 
 	const isOpen = $derived(assets.length > 0);
@@ -38,6 +40,7 @@
 		if (!dialog) return;
 		if (isOpen) {
 			imageFailed = {};
+			fullLoadedUrls = {};
 			if (!dialog.open) {
 				dialog.showModal();
 				(document.activeElement as HTMLElement | null)?.blur();
@@ -221,13 +224,13 @@
 				></video>
 			{/if}
 		{:else}
-			<img
-				src={imageFailed[assetIndex] ? staticSrc(asset.src) : asset.fullSrc}
+			<ProgressiveFullImage
+				src={asset.src}
+				fullSrc={asset.fullSrc}
 				alt={asset.alt}
-				class="max-h-full max-w-full cursor-pointer object-contain"
-				decoding="async"
-				draggable="false"
-				onerror={() => handleImageError(assetIndex)}
+				fullFailed={imageFailed[assetIndex] ?? false}
+				bind:loadedUrls={fullLoadedUrls}
+				onfullerror={() => handleImageError(assetIndex)}
 			/>
 		{/if}
 	</div>
