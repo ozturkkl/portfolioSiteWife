@@ -123,17 +123,25 @@
 	{#if menuOpen}
 		<nav
 			class={[
-				'site-gutter border-b py-8 backdrop-blur-md md:hidden',
-				useLightHeader ? 'border-white/10 bg-black/80' : 'border-cream-dark/50 bg-cream/98'
+				'border-b pb-4 backdrop-blur-md md:hidden',
+				useLightHeader
+					? 'border-white/20 bg-black/80'
+					: 'border-cream-dark bg-cream/98'
 			]}
 			aria-label="Mobile navigation"
 		>
-			<ul class="flex flex-col gap-6">
+			<ul
+				class={[
+					'divide-y',
+					useLightHeader ? 'divide-white/20' : 'divide-cream-dark'
+				]}
+			>
 				{#each navLinks as link (link.href)}
 					<li>
 						<a
 							href={resolve(link.href)}
-							class={['nav-link-mobile text-nav-mobile', navLinkClass(link.href)]}
+							class={['nav-link-mobile site-gutter text-nav-mobile', navLinkClass(link.href)]}
+							aria-current={isActive(link.href) ? 'page' : undefined}
 							onclick={closeMenu}
 						>
 							{link.label}
