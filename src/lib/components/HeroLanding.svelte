@@ -1,13 +1,14 @@
 <script lang="ts">
 	import type { MediaAsset } from '$lib/types/media';
 	import { site } from '$lib/data/site';
+	import { staticSrc } from '$lib/utils/static-src';
 
 	let { media }: { media: MediaAsset } = $props();
 </script>
 
 <section id="hero" class="relative h-svh w-full overflow-hidden bg-black" aria-label="Landing">
 	<img
-		src={media.src}
+		src={staticSrc(media.src)}
 		alt={media.alt}
 		width={media.width}
 		height={media.height}

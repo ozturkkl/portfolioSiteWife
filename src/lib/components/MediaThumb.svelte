@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { MediaAsset } from '$lib/types/media';
 	import { isVideo } from '$lib/types/media';
+	import { staticSrc } from '$lib/utils/static-src';
 
 	let {
 		asset,
@@ -13,7 +14,7 @@
 
 <div class={['relative', className]}>
 	<img
-		src={asset.src}
+		src={staticSrc(asset.src)}
 		alt={asset.alt}
 		width={asset.width}
 		height={asset.height}

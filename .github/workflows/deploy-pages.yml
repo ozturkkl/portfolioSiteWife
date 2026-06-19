@@ -27,6 +27,8 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      # No BASE_PATH — site is served at ilaydaturkmen.com (root). Only set BASE_PATH
+      # if you need the github.io/<repo>/ preview URL to work with images.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: build

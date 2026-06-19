@@ -3,6 +3,7 @@
 	import SectionHeading from '$lib/components/ui/SectionHeading.svelte';
 	import { media } from '$lib/data/media';
 	import { site } from '$lib/data/site';
+	import { staticSrc } from '$lib/utils/static-src';
 </script>
 
 <svelte:head>
@@ -16,7 +17,7 @@
 		<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 			<div class="photo-frame">
 				<img
-					src={media.about.src}
+					src={staticSrc(media.about.src)}
 					alt={media.about.alt}
 					width={media.about.width}
 					height={media.about.height}

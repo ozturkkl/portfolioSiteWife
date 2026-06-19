@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { MediaAsset } from '$lib/types/media';
 	import { site } from '$lib/data/site';
+	import { staticSrc } from '$lib/utils/static-src';
 
 	let { portrait }: { portrait: MediaAsset } = $props();
 </script>
@@ -11,7 +12,7 @@
 			class="grid items-center gap-10 md:grid-cols-[auto_1fr] md:gap-12 lg:gap-16"
 		>
 			<img
-				src={portrait.src}
+				src={staticSrc(portrait.src)}
 				alt={portrait.alt}
 				width={portrait.width}
 				height={portrait.height}

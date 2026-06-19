@@ -2,6 +2,7 @@
 	import SectionHeading from '$lib/components/ui/SectionHeading.svelte';
 	import { media } from '$lib/data/media';
 	import { site } from '$lib/data/site';
+	import { staticSrc } from '$lib/utils/static-src';
 
 	let name = $state('');
 	let email = $state('');
@@ -95,7 +96,7 @@
 
 					<div class="photo-frame">
 						<img
-							src={media.contact.src}
+							src={staticSrc(media.contact.src)}
 							alt={media.contact.alt}
 							width={media.contact.width}
 							height={media.contact.height}
