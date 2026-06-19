@@ -9,16 +9,18 @@
 
 	let {
 		assets,
-		lightbox = false
+		lightbox = false,
+		onOpenLightbox
 	}: {
 		assets: Array<GalleryMedia | MediaAsset>;
 		lightbox?: boolean;
+		onOpenLightbox?: (index: number) => void;
 	} = $props();
 
 	let gridEl = $state<HTMLElement | null>(null);
 	let columnWidth = $state(0);
 	let gap = $state(16);
-	let activeAsset = $state<MediaAsset | null>(null);
+	let activeIndex = $state<number | null>(null);
 
 	function measureGrid() {
 		if (!gridEl) return;
@@ -46,9 +48,13 @@
 		return Math.max(1, Math.ceil((displayHeight + gap) / (ROW_UNIT + gap)));
 	}
 
-	function openLightbox(item: GalleryMedia | MediaAsset) {
+	function openLightbox(index: number) {
+		if (onOpenLightbox) {
+			onOpenLightbox(index);
+			return;
+		}
 		if (!lightbox) return;
-		activeAsset = item;
+		activeIndex = index;
 	}
 
 	function viewLabel(item: GalleryMedia | MediaAsset): string {
@@ -78,14 +84,14 @@
 			class="photo-frame group relative min-h-0"
 			style:grid-row-end="span {rowSpan(item)}"
 		>
-			{#if lightbox}
+			{#if lightbox || onOpenLightbox}
 				<button
 					type="button"
 					class={[
 						'block h-full w-full text-left',
 						isVideo(item) ? 'cursor-pointer' : 'cursor-zoom-in'
 					]}
-					onclick={() => openLightbox(item)}
+					onclick={() => openLightbox(index)}
 					aria-label={viewLabel(item)}
 				>
 					<MediaThumb
@@ -112,4 +118,10 @@
 	{/each}
 </div>
 
-<Lightbox asset={activeAsset} onclose={() => (activeAsset = null)} />
+{#if lightbox && !onOpenLightbox}
+	<Lightbox
+		assets={activeIndex !== null ? (assets as MediaAsset[]) : []}
+		index={activeIndex ?? 0}
+		onclose={() => (activeIndex = null)}
+	/>
+{/if}

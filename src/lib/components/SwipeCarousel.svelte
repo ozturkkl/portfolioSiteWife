@@ -68,6 +68,14 @@
 		return () => observer.disconnect();
 	});
 
+	// Keep scroll position aligned when index is set externally (e.g. lightbox opens mid-gallery).
+	$effect.pre(() => {
+		if (isDragging || isAnimating) return;
+		index;
+		count;
+		scrollIndex = index;
+	});
+
 	onDestroy(() => {
 		cancelAnimation();
 	});
@@ -137,11 +145,18 @@
 	}
 
 	function goToIndex(newIndex: number, velocity = 0, animate = true) {
-		index = modIndex(newIndex, count);
+		const target = modIndex(newIndex, count);
+
+		if (animate) {
+			cancelAnimation();
+			isAnimating = true;
+		}
+
+		index = target;
 
 		if (!animate) {
 			cancelAnimation();
-			scrollIndex = index;
+			scrollIndex = target;
 			return;
 		}
 

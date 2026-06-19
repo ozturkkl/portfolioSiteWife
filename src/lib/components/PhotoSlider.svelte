@@ -7,14 +7,16 @@
 
 	let {
 		assets,
-		class: className = ''
+		class: className = '',
+		onOpenLightbox
 	}: {
 		assets: MediaAsset[];
 		class?: string;
+		onOpenLightbox?: (index: number) => void;
 	} = $props();
 
 	let index = $state(0);
-	let activeAsset = $state<MediaAsset | null>(null);
+	let lightboxOpen = $state(false);
 	let carousel = $state<SwipeCarousel | null>(null);
 
 	const current = $derived(assets[index] ?? assets[0]);
@@ -28,7 +30,11 @@
 	}
 
 	function openLightbox() {
-		if (current) activeAsset = current;
+		if (onOpenLightbox) {
+			onOpenLightbox(index);
+			return;
+		}
+		lightboxOpen = true;
 	}
 
 	function viewLabel(asset: MediaAsset): string {
@@ -132,4 +138,6 @@
 	</div>
 {/if}
 
-<Lightbox asset={activeAsset} onclose={() => (activeAsset = null)} />
+{#if !onOpenLightbox}
+	<Lightbox assets={lightboxOpen ? assets : []} bind:index onclose={() => (lightboxOpen = false)} />
+{/if}
