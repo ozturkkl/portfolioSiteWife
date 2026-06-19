@@ -1,5 +1,5 @@
 {
-	"syncedAt": "2026-06-19T03:42:06.240Z",
+	"syncedAt": "2026-06-19T05:40:04.746Z",
 	"hero": {
 		"src": "/images/hero.jpg",
 		"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/0-HOME/HERO.JPG",
@@ -122,12 +122,13 @@
 			"kind": "image"
 		},
 		{
-			"src": "/images/grid/grid-12-jpg.jpg",
-			"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/0-HOME/GRID/12.JPG",
-			"alt": "Portfolio preview — 12",
+			"src": "/images/grid/grid-12-test-name-hello-kemal-jpg.jpg",
+			"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/0-HOME/GRID/12-Test%20name%20hello%20kemal.JPG",
+			"alt": "Portfolio preview — 12-Test name hello kemal",
 			"width": 1600,
 			"height": 1067,
-			"kind": "image"
+			"kind": "image",
+			"caption": "Test name hello kemal"
 		},
 		{
 			"src": "/images/grid/grid-13-jpg.jpg",
@@ -196,1026 +197,931 @@
 	],
 	"portfolio": {
 		"categories": [
-			{
-				"id": "couples",
-				"label": "Couples"
-			},
-			{
-				"id": "street",
-				"label": "Street"
-			},
-			{
-				"id": "life",
-				"label": "Life"
-			},
-			{
-				"id": "self-portrait",
-				"label": "Self Portrait"
-			}
+			"couples",
+			"street",
+			"life",
+			"self portrait"
 		],
 		"media": [
 			{
 				"id": "g-53",
 				"src": "/images/portfolio/street-1-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/1.JPG",
-				"alt": "Street — 1",
+				"alt": "street — 1",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-54",
 				"src": "/images/portfolio/street-2-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/2.JPG",
-				"alt": "Street — 2",
+				"alt": "street — 2",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-55",
 				"src": "/images/portfolio/street-3-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/3.JPG",
-				"alt": "Street — 3",
+				"alt": "street — 3",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-56",
 				"src": "/images/portfolio/street-4-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/4.JPG",
-				"alt": "Street — 4",
+				"alt": "street — 4",
 				"width": 1079,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-57",
-				"src": "/images/portfolio/street-5-jpg.jpg",
-				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/5.JPG",
-				"alt": "Street — 5",
+				"src": "/images/portfolio/street-5-shemsiye-jpg.jpg",
+				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/5-shemsiye.JPG",
+				"alt": "street — 5-shemsiye",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"caption": "shemsiye",
+				"category": "street"
 			},
 			{
 				"id": "g-58",
 				"src": "/images/portfolio/street-6-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/6.JPG",
-				"alt": "Street — 6",
+				"alt": "street — 6",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-59",
 				"src": "/images/portfolio/street-7-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/7.JPG",
-				"alt": "Street — 7",
+				"alt": "street — 7",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-60",
 				"src": "/images/portfolio/street-8-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/8.JPG",
-				"alt": "Street — 8",
+				"alt": "street — 8",
 				"width": 1066,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-61",
 				"src": "/images/portfolio/street-9-jpeg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/9.JPEG",
-				"alt": "Street — 9",
+				"alt": "street — 9",
 				"width": 1600,
 				"height": 1483,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-62",
 				"src": "/images/portfolio/street-10-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/10.JPG",
-				"alt": "Street — 10",
+				"alt": "street — 10",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-63",
 				"src": "/images/portfolio/street-11-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/11.JPG",
-				"alt": "Street — 11",
+				"alt": "street — 11",
 				"width": 1600,
 				"height": 1076,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-64",
 				"src": "/images/portfolio/street-12-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/12.JPG",
-				"alt": "Street — 12",
+				"alt": "street — 12",
 				"width": 1066,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-65",
 				"src": "/images/portfolio/street-13-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/13.JPG",
-				"alt": "Street — 13",
+				"alt": "street — 13",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-66",
 				"src": "/images/portfolio/street-14-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/14.JPG",
-				"alt": "Street — 14",
+				"alt": "street — 14",
 				"width": 1049,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-67",
 				"src": "/images/portfolio/street-15-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/15.JPG",
-				"alt": "Street — 15",
+				"alt": "street — 15",
 				"width": 1600,
 				"height": 1092,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-68",
 				"src": "/images/portfolio/street-16-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/16.JPG",
-				"alt": "Street — 16",
+				"alt": "street — 16",
 				"width": 1224,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-69",
 				"src": "/images/portfolio/street-17-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/17.JPG",
-				"alt": "Street — 17",
+				"alt": "street — 17",
 				"width": 1042,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-70",
 				"src": "/images/portfolio/street-18-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/18.JPG",
-				"alt": "Street — 18",
+				"alt": "street — 18",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-71",
 				"src": "/images/portfolio/street-19-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/19.jpg",
-				"alt": "Street — 19",
+				"alt": "street — 19",
 				"width": 1066,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-72",
 				"src": "/images/portfolio/street-20-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/20.JPG",
-				"alt": "Street — 20",
+				"alt": "street — 20",
 				"width": 1066,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-73",
 				"src": "/images/portfolio/street-21-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/21.JPG",
-				"alt": "Street — 21",
+				"alt": "street — 21",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-74",
 				"src": "/images/portfolio/street-22-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/22.JPG",
-				"alt": "Street — 22",
+				"alt": "street — 22",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-75",
 				"src": "/images/portfolio/street-23-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/23.JPG",
-				"alt": "Street — 23",
+				"alt": "street — 23",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-76",
 				"src": "/images/portfolio/street-24-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/24.JPG",
-				"alt": "Street — 24",
+				"alt": "street — 24",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-77",
 				"src": "/images/portfolio/street-25-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/25.JPG",
-				"alt": "Street — 25",
+				"alt": "street — 25",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-78",
 				"src": "/images/portfolio/street-26-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/26.JPG",
-				"alt": "Street — 26",
+				"alt": "street — 26",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-79",
 				"src": "/images/portfolio/street-27-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/27.JPG",
-				"alt": "Street — 27",
+				"alt": "street — 27",
 				"width": 1600,
 				"height": 1067,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-80",
 				"src": "/images/portfolio/street-28-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/28.JPG",
-				"alt": "Street — 28",
+				"alt": "street — 28",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-81",
 				"src": "/images/portfolio/street-29-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/29.JPG",
-				"alt": "Street — 29",
+				"alt": "street — 29",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-82",
 				"src": "/images/portfolio/street-30-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/30.JPG",
-				"alt": "Street — 30",
+				"alt": "street — 30",
 				"width": 1066,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-83",
 				"src": "/images/portfolio/street-31-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/31.JPG",
-				"alt": "Street — 31",
+				"alt": "street — 31",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-84",
 				"src": "/images/portfolio/street-32-jpeg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/32.JPEG",
-				"alt": "Street — 32",
+				"alt": "street — 32",
 				"width": 1600,
 				"height": 1193,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-85",
 				"src": "/images/portfolio/street-33-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/33.JPG",
-				"alt": "Street — 33",
+				"alt": "street — 33",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-86",
 				"src": "/images/portfolio/street-34-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/34.JPG",
-				"alt": "Street — 34",
+				"alt": "street — 34",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-87",
 				"src": "/images/portfolio/street-35-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/35.JPG",
-				"alt": "Street — 35",
+				"alt": "street — 35",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-88",
 				"src": "/images/portfolio/street-36-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/36.JPG",
-				"alt": "Street — 36",
+				"alt": "street — 36",
 				"width": 1072,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-89",
 				"src": "/images/portfolio/street-37-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/37.JPG",
-				"alt": "Street — 37",
+				"alt": "street — 37",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-90",
 				"src": "/images/portfolio/street-38-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/38.JPG",
-				"alt": "Street — 38",
+				"alt": "street — 38",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-91",
 				"src": "/images/portfolio/street-39-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/39.jpg",
-				"alt": "Street — 39",
+				"alt": "street — 39",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-92",
 				"src": "/images/portfolio/street-40-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/40.JPG",
-				"alt": "Street — 40",
+				"alt": "street — 40",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-93",
 				"src": "/images/portfolio/street-41-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/41.JPG",
-				"alt": "Street — 41",
+				"alt": "street — 41",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-94",
 				"src": "/images/portfolio/street-42-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/42.JPG",
-				"alt": "Street — 42",
+				"alt": "street — 42",
 				"width": 1308,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-95",
 				"src": "/images/portfolio/street-43-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/43.JPG",
-				"alt": "Street — 43",
+				"alt": "street — 43",
 				"width": 1066,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-96",
 				"src": "/images/portfolio/street-44-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/44.JPG",
-				"alt": "Street — 44",
+				"alt": "street — 44",
 				"width": 1087,
 				"height": 1600,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-97",
 				"src": "/images/portfolio/street-45-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/1-STREET/45.jpg",
-				"alt": "Street — 45",
+				"alt": "street — 45",
 				"width": 1600,
 				"height": 1067,
 				"kind": "image",
-				"category": "street",
-				"categoryLabel": "Street"
+				"category": "street"
 			},
 			{
 				"id": "g-98",
 				"src": "/images/portfolio/life-1-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/1.JPG",
-				"alt": "Life — 1",
+				"alt": "life — 1",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-99",
 				"src": "/images/portfolio/life-2-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/2.JPG",
-				"alt": "Life — 2",
+				"alt": "life — 2",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-100",
 				"src": "/images/portfolio/life-3-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/3.JPG",
-				"alt": "Life — 3",
+				"alt": "life — 3",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-101",
 				"src": "/images/portfolio/life-4-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/4.JPG",
-				"alt": "Life — 4",
+				"alt": "life — 4",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-102",
 				"src": "/images/portfolio/life-5-jpeg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/5.JPEG",
-				"alt": "Life — 5",
+				"alt": "life — 5",
 				"width": 1066,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-103",
 				"src": "/images/portfolio/life-6-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/6.JPG",
-				"alt": "Life — 6",
+				"alt": "life — 6",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-104",
 				"src": "/images/portfolio/life-7-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/7.JPG",
-				"alt": "Life — 7",
+				"alt": "life — 7",
 				"width": 1600,
 				"height": 1080,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-105",
 				"src": "/images/portfolio/life-8-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/8.JPG",
-				"alt": "Life — 8",
+				"alt": "life — 8",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-106",
 				"src": "/images/portfolio/life-9-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/9.JPG",
-				"alt": "Life — 9",
+				"alt": "life — 9",
 				"width": 1091,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-107",
 				"src": "/images/portfolio/life-10-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/10.JPG",
-				"alt": "Life — 10",
+				"alt": "life — 10",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-108",
 				"src": "/images/portfolio/life-11-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/11.jpg",
-				"alt": "Life — 11",
+				"alt": "life — 11",
 				"width": 1154,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-109",
 				"src": "/images/portfolio/life-12-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/12.JPG",
-				"alt": "Life — 12",
+				"alt": "life — 12",
 				"width": 1600,
 				"height": 1067,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-110",
 				"src": "/images/portfolio/life-13-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/13.JPG",
-				"alt": "Life — 13",
+				"alt": "life — 13",
 				"width": 1090,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-111",
 				"src": "/images/portfolio/life-14-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/14.JPG",
-				"alt": "Life — 14",
+				"alt": "life — 14",
 				"width": 1600,
 				"height": 1072,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-112",
 				"src": "/images/portfolio/life-15-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/15.JPG",
-				"alt": "Life — 15",
+				"alt": "life — 15",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-113",
 				"src": "/images/portfolio/life-16-jpeg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/16.JPEG",
-				"alt": "Life — 16",
+				"alt": "life — 16",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-114",
 				"src": "/images/portfolio/life-17-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/17.jpg",
-				"alt": "Life — 17",
+				"alt": "life — 17",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-115",
 				"src": "/images/portfolio/life-18-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/18.JPG",
-				"alt": "Life — 18",
+				"alt": "life — 18",
 				"width": 1600,
 				"height": 1067,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-116",
 				"src": "/images/portfolio/life-19-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/19.JPG",
-				"alt": "Life — 19",
+				"alt": "life — 19",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-117",
 				"src": "/images/portfolio/life-20-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/20.JPG",
-				"alt": "Life — 20",
+				"alt": "life — 20",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-118",
 				"src": "/images/portfolio/life-21-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/21.JPG",
-				"alt": "Life — 21",
+				"alt": "life — 21",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-119",
 				"src": "/images/portfolio/life-22-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/22.JPG",
-				"alt": "Life — 22",
+				"alt": "life — 22",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-120",
 				"src": "/images/portfolio/life-23-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/23.JPG",
-				"alt": "Life — 23",
+				"alt": "life — 23",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-121",
 				"src": "/images/portfolio/life-24-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/24.JPG",
-				"alt": "Life — 24",
+				"alt": "life — 24",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-122",
 				"src": "/images/portfolio/life-25-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/25.JPG",
-				"alt": "Life — 25",
+				"alt": "life — 25",
 				"width": 1600,
 				"height": 1067,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-123",
 				"src": "/images/portfolio/life-26-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/26.JPG",
-				"alt": "Life — 26",
+				"alt": "life — 26",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-124",
 				"src": "/images/portfolio/life-27-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/27.JPG",
-				"alt": "Life — 27",
+				"alt": "life — 27",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-125",
 				"src": "/images/portfolio/life-28-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/28.JPG",
-				"alt": "Life — 28",
+				"alt": "life — 28",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-126",
 				"src": "/images/portfolio/life-29-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/29.JPG",
-				"alt": "Life — 29",
+				"alt": "life — 29",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-127",
 				"src": "/images/portfolio/life-30-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/30.JPG",
-				"alt": "Life — 30",
+				"alt": "life — 30",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-128",
 				"src": "/images/portfolio/life-31-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/31.JPG",
-				"alt": "Life — 31",
+				"alt": "life — 31",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-129",
 				"src": "/images/portfolio/life-32-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/32.JPG",
-				"alt": "Life — 32",
+				"alt": "life — 32",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-130",
 				"src": "/images/portfolio/life-33-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/33.JPG",
-				"alt": "Life — 33",
+				"alt": "life — 33",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-131",
 				"src": "/images/portfolio/life-35-jpg.jpg",
 				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/2-LIFE/35.JPG",
-				"alt": "Life — 35",
+				"alt": "life — 35",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "life",
-				"categoryLabel": "Life"
+				"category": "life"
 			},
 			{
 				"id": "g-132",
-				"src": "/images/portfolio/self-portrait-1-jpg.jpg",
-				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF_PORTRAIT/1.jpg",
-				"alt": "Self Portrait — 1",
+				"src": "/images/portfolio/self-portrait-1-bu-jpg.jpg",
+				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF%20PORTRAIT/1-BU.jpg",
+				"alt": "self portrait — 1-BU",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "self-portrait",
-				"categoryLabel": "Self Portrait"
+				"caption": "BU",
+				"category": "self portrait"
 			},
 			{
 				"id": "g-133",
-				"src": "/images/portfolio/self-portrait-2-jpg.jpg",
-				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF_PORTRAIT/2.JPG",
-				"alt": "Self Portrait — 2",
+				"src": "/images/portfolio/self-portrait-2-cok-jpg.jpg",
+				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF%20PORTRAIT/2-COK.JPG",
+				"alt": "self portrait — 2-COK",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "self-portrait",
-				"categoryLabel": "Self Portrait"
+				"caption": "COK",
+				"category": "self portrait"
 			},
 			{
 				"id": "g-134",
-				"src": "/images/portfolio/self-portrait-3-jpeg.jpg",
-				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF_PORTRAIT/3.JPEG",
-				"alt": "Self Portrait — 3",
+				"src": "/images/portfolio/self-portrait-3-datli-jpeg.jpg",
+				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF%20PORTRAIT/3-DATLI.JPEG",
+				"alt": "self portrait — 3-DATLI",
 				"width": 1067,
 				"height": 1600,
 				"kind": "image",
-				"category": "self-portrait",
-				"categoryLabel": "Self Portrait"
+				"caption": "DATLI",
+				"category": "self portrait"
 			},
 			{
 				"id": "g-135",
-				"src": "/images/portfolio/self-portrait-4-jpg.jpg",
-				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF_PORTRAIT/4.JPG",
-				"alt": "Self Portrait — 4",
+				"src": "/images/portfolio/self-portrait-4-bir-jpg.jpg",
+				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF%20PORTRAIT/4-BIR.JPG",
+				"alt": "self portrait — 4-BIR",
 				"width": 1600,
 				"height": 1067,
 				"kind": "image",
-				"category": "self-portrait",
-				"categoryLabel": "Self Portrait"
+				"caption": "BIR",
+				"category": "self portrait"
 			},
 			{
 				"id": "g-136",
-				"src": "/images/portfolio/self-portrait-5-jpg.jpg",
-				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF_PORTRAIT/5.JPG",
-				"alt": "Self Portrait — 5",
+				"src": "/images/portfolio/self-portrait-5-yavruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu.jpg",
+				"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/3-SELF%20PORTRAIT/5-YAVRUUuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu.JPG",
+				"alt": "self portrait — 5-YAVRUUuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu",
 				"width": 1600,
 				"height": 1067,
 				"kind": "image",
-				"category": "self-portrait",
-				"categoryLabel": "Self Portrait"
+				"caption": "YAVRUUuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu",
+				"category": "self portrait"
 			}
 		],
 		"couples": [
 			{
 				"id": "couple-0-S & F",
-				"label": "Couple 1",
+				"label": "S & F",
 				"media": [
 					{
 						"id": "g-1",
 						"src": "/images/portfolio/couples-0-s-f-1-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/1.JPG",
-						"alt": "Couple 1 — 1",
+						"alt": "S & F — 1",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-2",
 						"src": "/images/portfolio/couples-0-s-f-2-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/2.JPG",
-						"alt": "Couple 1 — 2",
+						"alt": "S & F — 2",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-3",
 						"src": "/images/portfolio/couples-0-s-f-3-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/3.JPG",
-						"alt": "Couple 1 — 3",
+						"alt": "S & F — 3",
 						"width": 1066,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-4",
-						"src": "/images/portfolio/couples-0-s-f-4-jpg.jpg",
-						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/4.JPG",
-						"alt": "Couple 1 — 4",
+						"src": "/images/portfolio/couples-0-s-f-4-fatih-hojam-test-jpg.jpg",
+						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/4-Fatih%20hojam%20test.JPG",
+						"alt": "S & F — 4-Fatih hojam test",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"caption": "Fatih hojam test",
+						"category": "couples"
 					},
 					{
 						"id": "g-5",
 						"src": "/images/portfolio/couples-0-s-f-5-jpeg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/5.JPEG",
-						"alt": "Couple 1 — 5",
+						"alt": "S & F — 5",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-6",
 						"src": "/images/portfolio/couples-0-s-f-6-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/6.JPG",
-						"alt": "Couple 1 — 6",
+						"alt": "S & F — 6",
 						"width": 1066,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					}
 				],
 				"slider": [
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-1-jpeg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/1.JPEG",
-						"alt": "Couple 1 — slider — 1",
+						"alt": "S & F — slider — 1",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1223,7 +1129,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-2-jpeg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/2.JPEG",
-						"alt": "Couple 1 — slider — 2",
+						"alt": "S & F — slider — 2",
 						"width": 1293,
 						"height": 2000,
 						"kind": "image"
@@ -1231,7 +1137,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-3-jpeg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/3.JPEG",
-						"alt": "Couple 1 — slider — 3",
+						"alt": "S & F — slider — 3",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1239,7 +1145,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-4-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/4.JPG",
-						"alt": "Couple 1 — slider — 4",
+						"alt": "S & F — slider — 4",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1247,7 +1153,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-5-jpeg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/5.JPEG",
-						"alt": "Couple 1 — slider — 5",
+						"alt": "S & F — slider — 5",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1255,7 +1161,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-6-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/6.JPG",
-						"alt": "Couple 1 — slider — 6",
+						"alt": "S & F — slider — 6",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1263,23 +1169,24 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-7-jpeg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/7.JPEG",
-						"alt": "Couple 1 — slider — 7",
+						"alt": "S & F — slider — 7",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
 					},
 					{
-						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-8-jpg.jpg",
-						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/8.JPG",
-						"alt": "Couple 1 — slider — 8",
+						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-8-test-name-hi-jpg.jpg",
+						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/8-Test%20name%20hi.JPG",
+						"alt": "S & F — slider — 8-Test name hi",
 						"width": 1333,
 						"height": 2000,
-						"kind": "image"
+						"kind": "image",
+						"caption": "Test name hi"
 					},
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-9-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/9.jpg",
-						"alt": "Couple 1 — slider — 9",
+						"alt": "S & F — slider — 9",
 						"width": 1259,
 						"height": 2000,
 						"kind": "image"
@@ -1287,7 +1194,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-10-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/10.jpg",
-						"alt": "Couple 1 — slider — 10",
+						"alt": "S & F — slider — 10",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1295,7 +1202,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-11-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/11.JPG",
-						"alt": "Couple 1 — slider — 11",
+						"alt": "S & F — slider — 11",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1303,7 +1210,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-12-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/12.JPG",
-						"alt": "Couple 1 — slider — 12",
+						"alt": "S & F — slider — 12",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1311,7 +1218,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-13-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/13.jpg",
-						"alt": "Couple 1 — slider — 13",
+						"alt": "S & F — slider — 13",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1319,7 +1226,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-14-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/14.JPG",
-						"alt": "Couple 1 — slider — 14",
+						"alt": "S & F — slider — 14",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1327,7 +1234,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-15-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/15.JPG",
-						"alt": "Couple 1 — slider — 15",
+						"alt": "S & F — slider — 15",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1335,7 +1242,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-0-s-f/couples-0-s-f-slider-16-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/0-S%20%26%20F/SLIDER/16.JPG",
-						"alt": "Couple 1 — slider — 16",
+						"alt": "S & F — slider — 16",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1344,91 +1251,84 @@
 			},
 			{
 				"id": "couple-1-B & K",
-				"label": "Couple 2",
+				"label": "B & K",
 				"media": [
 					{
 						"id": "g-7",
 						"src": "/images/portfolio/couples-1-b-k-1-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/1.JPG",
-						"alt": "Couple 2 — 1",
+						"alt": "B & K — 1",
 						"width": 1600,
 						"height": 1067,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-8",
 						"src": "/images/portfolio/couples-1-b-k-2-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/2.JPG",
-						"alt": "Couple 2 — 2",
+						"alt": "B & K — 2",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-9",
 						"src": "/images/portfolio/couples-1-b-k-3-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/3.JPG",
-						"alt": "Couple 2 — 3",
+						"alt": "B & K — 3",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-10",
 						"src": "/images/portfolio/couples-1-b-k-4-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/4.JPG",
-						"alt": "Couple 2 — 4",
+						"alt": "B & K — 4",
 						"width": 1600,
 						"height": 1067,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-11",
 						"src": "/images/portfolio/couples-1-b-k-5-mp4.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/5.MP4",
-						"alt": "Couple 2 — 5",
+						"alt": "B & K — 5",
 						"width": 1280,
 						"height": 852,
 						"kind": "video",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-12",
 						"src": "/images/portfolio/couples-1-b-k-6-mp4.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/6.MP4",
-						"alt": "Couple 2 — 6",
+						"alt": "B & K — 6",
 						"width": 1280,
 						"height": 852,
 						"kind": "video",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-13",
 						"src": "/images/portfolio/couples-1-b-k-7-mp4.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/7.MP4",
-						"alt": "Couple 2 — 7",
+						"alt": "B & K — 7",
 						"width": 868,
 						"height": 1280,
 						"kind": "video",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					}
 				],
 				"slider": [
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-1-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/1.JPG",
-						"alt": "Couple 2 — slider — 1",
+						"alt": "B & K — slider — 1",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1436,7 +1336,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-2-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/2.JPG",
-						"alt": "Couple 2 — slider — 2",
+						"alt": "B & K — slider — 2",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1444,7 +1344,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-3-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/3.JPG",
-						"alt": "Couple 2 — slider — 3",
+						"alt": "B & K — slider — 3",
 						"width": 2000,
 						"height": 1334,
 						"kind": "image"
@@ -1452,7 +1352,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-4-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/4.JPG",
-						"alt": "Couple 2 — slider — 4",
+						"alt": "B & K — slider — 4",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1460,7 +1360,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-5-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/5.JPG",
-						"alt": "Couple 2 — slider — 5",
+						"alt": "B & K — slider — 5",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1468,7 +1368,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-6-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/6.JPG",
-						"alt": "Couple 2 — slider — 6",
+						"alt": "B & K — slider — 6",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1476,7 +1376,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-7-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/7.JPG",
-						"alt": "Couple 2 — slider — 7",
+						"alt": "B & K — slider — 7",
 						"width": 2000,
 						"height": 1460,
 						"kind": "image"
@@ -1484,7 +1384,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-8-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/8.JPG",
-						"alt": "Couple 2 — slider — 8",
+						"alt": "B & K — slider — 8",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1492,7 +1392,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-9-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/9.JPG",
-						"alt": "Couple 2 — slider — 9",
+						"alt": "B & K — slider — 9",
 						"width": 2000,
 						"height": 1334,
 						"kind": "image"
@@ -1500,7 +1400,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-10-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/10.JPG",
-						"alt": "Couple 2 — slider — 10",
+						"alt": "B & K — slider — 10",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1508,7 +1408,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-11-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/11.JPG",
-						"alt": "Couple 2 — slider — 11",
+						"alt": "B & K — slider — 11",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1516,7 +1416,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-12-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/12.JPG",
-						"alt": "Couple 2 — slider — 12",
+						"alt": "B & K — slider — 12",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1524,7 +1424,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-13-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/13.JPG",
-						"alt": "Couple 2 — slider — 13",
+						"alt": "B & K — slider — 13",
 						"width": 2000,
 						"height": 1333,
 						"kind": "image"
@@ -1532,7 +1432,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-14-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/14.JPG",
-						"alt": "Couple 2 — slider — 14",
+						"alt": "B & K — slider — 14",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1540,7 +1440,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-15-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/15.JPG",
-						"alt": "Couple 2 — slider — 15",
+						"alt": "B & K — slider — 15",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1548,7 +1448,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-16-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/16.JPG",
-						"alt": "Couple 2 — slider — 16",
+						"alt": "B & K — slider — 16",
 						"width": 2000,
 						"height": 1334,
 						"kind": "image"
@@ -1556,7 +1456,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-17-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/17.JPG",
-						"alt": "Couple 2 — slider — 17",
+						"alt": "B & K — slider — 17",
 						"width": 2000,
 						"height": 1586,
 						"kind": "image"
@@ -1564,7 +1464,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-18-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/18.JPG",
-						"alt": "Couple 2 — slider — 18",
+						"alt": "B & K — slider — 18",
 						"width": 1438,
 						"height": 2000,
 						"kind": "image"
@@ -1572,7 +1472,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-1-b-k/couples-1-b-k-slider-19-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/1-B%20%26%20K/SLIDER/19.JPG",
-						"alt": "Couple 2 — slider — 19",
+						"alt": "B & K — slider — 19",
 						"width": 1334,
 						"height": 2000,
 						"kind": "image"
@@ -1581,235 +1481,216 @@
 			},
 			{
 				"id": "couple-2-B & I ",
-				"label": "Couple 3",
+				"label": "B & I",
 				"media": [
 					{
 						"id": "g-14",
 						"src": "/images/portfolio/couples-2-b-i-dsc09401-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/2-B%20%26%20I%20/DSC09401.JPG",
-						"alt": "Couple 3 — DSC09401",
+						"alt": "B & I — DSC09401",
 						"width": 1600,
 						"height": 1108,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-15",
 						"src": "/images/portfolio/couples-2-b-i-dsc09409-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/2-B%20%26%20I%20/DSC09409.JPG",
-						"alt": "Couple 3 — DSC09409",
+						"alt": "B & I — DSC09409",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-16",
 						"src": "/images/portfolio/couples-2-b-i-dsc09415-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/2-B%20%26%20I%20/DSC09415.JPG",
-						"alt": "Couple 3 — DSC09415",
+						"alt": "B & I — DSC09415",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-17",
 						"src": "/images/portfolio/couples-2-b-i-dsc09441-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/2-B%20%26%20I%20/DSC09441.JPG",
-						"alt": "Couple 3 — DSC09441",
+						"alt": "B & I — DSC09441",
 						"width": 1066,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					}
 				]
 			},
 			{
 				"id": "couple-3-E & S",
-				"label": "Couple 4",
+				"label": "E & S",
 				"media": [
 					{
 						"id": "g-18",
 						"src": "/images/portfolio/couples-3-e-s-1-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/3-E%20%26%20S/1.JPG",
-						"alt": "Couple 4 — 1",
+						"alt": "E & S — 1",
 						"width": 1600,
 						"height": 1067,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-19",
 						"src": "/images/portfolio/couples-3-e-s-2-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/3-E%20%26%20S/2.JPG",
-						"alt": "Couple 4 — 2",
+						"alt": "E & S — 2",
 						"width": 1600,
 						"height": 1067,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-20",
 						"src": "/images/portfolio/couples-3-e-s-3-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/3-E%20%26%20S/3.JPG",
-						"alt": "Couple 4 — 3",
+						"alt": "E & S — 3",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-21",
 						"src": "/images/portfolio/couples-3-e-s-4-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/3-E%20%26%20S/4.JPG",
-						"alt": "Couple 4 — 4",
+						"alt": "E & S — 4",
 						"width": 1600,
 						"height": 1087,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-22",
 						"src": "/images/portfolio/couples-3-e-s-5-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/3-E%20%26%20S/5.JPG",
-						"alt": "Couple 4 — 5",
+						"alt": "E & S — 5",
 						"width": 1066,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-23",
 						"src": "/images/portfolio/couples-3-e-s-6-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/3-E%20%26%20S/6.JPG",
-						"alt": "Couple 4 — 6",
+						"alt": "E & S — 6",
 						"width": 1600,
 						"height": 1067,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-24",
 						"src": "/images/portfolio/couples-3-e-s-7-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/3-E%20%26%20S/7.JPG",
-						"alt": "Couple 4 — 7",
+						"alt": "E & S — 7",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-25",
 						"src": "/images/portfolio/couples-3-e-s-8-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/3-E%20%26%20S/8.JPG",
-						"alt": "Couple 4 — 8",
+						"alt": "E & S — 8",
 						"width": 1600,
 						"height": 1067,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					}
 				]
 			},
 			{
 				"id": "couple-4-G & I",
-				"label": "Couple 5",
+				"label": "G & I",
 				"media": [
 					{
 						"id": "g-26",
 						"src": "/images/portfolio/couples-4-g-i-1-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/1.jpg",
-						"alt": "Couple 5 — 1",
+						"alt": "G & I — 1",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-27",
 						"src": "/images/portfolio/couples-4-g-i-2-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/2.jpg",
-						"alt": "Couple 5 — 2",
+						"alt": "G & I — 2",
 						"width": 1052,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-28",
 						"src": "/images/portfolio/couples-4-g-i-3-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/3.jpg",
-						"alt": "Couple 5 — 3",
+						"alt": "G & I — 3",
 						"width": 1105,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-29",
 						"src": "/images/portfolio/couples-4-g-i-5-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/5.jpg",
-						"alt": "Couple 5 — 5",
+						"alt": "G & I — 5",
 						"width": 1066,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-30",
 						"src": "/images/portfolio/couples-4-g-i-6-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/6.jpg",
-						"alt": "Couple 5 — 6",
+						"alt": "G & I — 6",
 						"width": 1131,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-31",
 						"src": "/images/portfolio/couples-4-g-i-8-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/8.jpg",
-						"alt": "Couple 5 — 8",
+						"alt": "G & I — 8",
 						"width": 1081,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-32",
 						"src": "/images/portfolio/couples-4-g-i-9-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/9.jpg",
-						"alt": "Couple 5 — 9",
+						"alt": "G & I — 9",
 						"width": 1600,
 						"height": 1192,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					}
 				],
 				"slider": [
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-1-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/1.jpg",
-						"alt": "Couple 5 — slider — 1",
+						"alt": "G & I — slider — 1",
 						"width": 2000,
 						"height": 1496,
 						"kind": "image"
@@ -1817,7 +1698,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-2-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/2.jpg",
-						"alt": "Couple 5 — slider — 2",
+						"alt": "G & I — slider — 2",
 						"width": 2000,
 						"height": 1333,
 						"kind": "image"
@@ -1825,7 +1706,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-3-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/3.jpg",
-						"alt": "Couple 5 — slider — 3",
+						"alt": "G & I — slider — 3",
 						"width": 1359,
 						"height": 2000,
 						"kind": "image"
@@ -1833,7 +1714,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-4-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/4.jpg",
-						"alt": "Couple 5 — slider — 4",
+						"alt": "G & I — slider — 4",
 						"width": 2000,
 						"height": 1333,
 						"kind": "image"
@@ -1841,7 +1722,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-5-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/5.jpg",
-						"alt": "Couple 5 — slider — 5",
+						"alt": "G & I — slider — 5",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1849,7 +1730,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-6-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/6.jpg",
-						"alt": "Couple 5 — slider — 6",
+						"alt": "G & I — slider — 6",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1857,7 +1738,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-7-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/7.jpg",
-						"alt": "Couple 5 — slider — 7",
+						"alt": "G & I — slider — 7",
 						"width": 2000,
 						"height": 1333,
 						"kind": "image"
@@ -1865,7 +1746,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-8-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/8.jpg",
-						"alt": "Couple 5 — slider — 8",
+						"alt": "G & I — slider — 8",
 						"width": 1333,
 						"height": 2000,
 						"kind": "image"
@@ -1873,7 +1754,7 @@
 					{
 						"src": "/images/portfolio/sliders/couples-4-g-i/couples-4-g-i-slider-9-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/4-G%20%26%20I/SLIDER/9.jpg",
-						"alt": "Couple 5 — slider — 9",
+						"alt": "G & I — slider — 9",
 						"width": 2000,
 						"height": 1353,
 						"kind": "image"
@@ -1882,233 +1763,213 @@
 			},
 			{
 				"id": "couple-5- A & A",
-				"label": "Couple 6",
+				"label": "A & A",
 				"media": [
 					{
 						"id": "g-33",
 						"src": "/images/portfolio/couples-5-a-a-1-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/1.JPG",
-						"alt": "Couple 6 — 1",
+						"alt": "A & A — 1",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-34",
 						"src": "/images/portfolio/couples-5-a-a-2-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/2.JPG",
-						"alt": "Couple 6 — 2",
+						"alt": "A & A — 2",
 						"width": 1066,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-35",
 						"src": "/images/portfolio/couples-5-a-a-3-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/3.JPG",
-						"alt": "Couple 6 — 3",
+						"alt": "A & A — 3",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-36",
 						"src": "/images/portfolio/couples-5-a-a-4-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/4.jpg",
-						"alt": "Couple 6 — 4",
+						"alt": "A & A — 4",
 						"width": 1066,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-37",
 						"src": "/images/portfolio/couples-5-a-a-5-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/5.JPG",
-						"alt": "Couple 6 — 5",
+						"alt": "A & A — 5",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-38",
 						"src": "/images/portfolio/couples-5-a-a-6-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/6.JPG",
-						"alt": "Couple 6 — 6",
+						"alt": "A & A — 6",
 						"width": 1600,
 						"height": 1067,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-39",
 						"src": "/images/portfolio/couples-5-a-a-7-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/7.JPG",
-						"alt": "Couple 6 — 7",
+						"alt": "A & A — 7",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-40",
 						"src": "/images/portfolio/couples-5-a-a-8-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/8.JPG",
-						"alt": "Couple 6 — 8",
+						"alt": "A & A — 8",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-41",
 						"src": "/images/portfolio/couples-5-a-a-9-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/9.JPG",
-						"alt": "Couple 6 — 9",
+						"alt": "A & A — 9",
 						"width": 1066,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-42",
 						"src": "/images/portfolio/couples-5-a-a-10-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/5-%20A%20%26%20A/10.JPG",
-						"alt": "Couple 6 — 10",
+						"alt": "A & A — 10",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					}
 				]
 			},
 			{
 				"id": "couple-6-M & A",
-				"label": "Couple 7",
+				"label": "M & A",
 				"media": [
 					{
 						"id": "g-43",
 						"src": "/images/portfolio/couples-6-m-a-1-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/1.JPG",
-						"alt": "Couple 7 — 1",
+						"alt": "M & A — 1",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-44",
 						"src": "/images/portfolio/couples-6-m-a-2-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/2.JPG",
-						"alt": "Couple 7 — 2",
+						"alt": "M & A — 2",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-45",
 						"src": "/images/portfolio/couples-6-m-a-3-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/3.JPG",
-						"alt": "Couple 7 — 3",
+						"alt": "M & A — 3",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-46",
 						"src": "/images/portfolio/couples-6-m-a-5-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/5.JPG",
-						"alt": "Couple 7 — 5",
+						"alt": "M & A — 5",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-47",
 						"src": "/images/portfolio/couples-6-m-a-6-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/6.JPG",
-						"alt": "Couple 7 — 6",
+						"alt": "M & A — 6",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-48",
 						"src": "/images/portfolio/couples-6-m-a-7-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/7.JPG",
-						"alt": "Couple 7 — 7",
+						"alt": "M & A — 7",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-49",
 						"src": "/images/portfolio/couples-6-m-a-8-jpg.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/8.JPG",
-						"alt": "Couple 7 — 8",
+						"alt": "M & A — 8",
 						"width": 1067,
 						"height": 1600,
 						"kind": "image",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-50",
 						"src": "/images/portfolio/couples-6-m-a-9-mov.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/9.MOV",
-						"alt": "Couple 7 — 9",
+						"alt": "M & A — 9",
 						"width": 1600,
 						"height": 2400,
 						"kind": "video",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-51",
 						"src": "/images/portfolio/couples-6-m-a-10-mov.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/10.MOV",
-						"alt": "Couple 7 — 10",
+						"alt": "M & A — 10",
 						"width": 1600,
 						"height": 2400,
 						"kind": "video",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					},
 					{
 						"id": "g-52",
 						"src": "/images/portfolio/couples-6-m-a-11-mov.jpg",
 						"fullSrc": "https://store.kozturk.com/public.php/dav/files/ffYXDyjq2z4Ycxw/1-PORTFOLIO/0-COUPLES/6-M%20%26%20A/11.MOV",
-						"alt": "Couple 7 — 11",
+						"alt": "M & A — 11",
 						"width": 1600,
 						"height": 1066,
 						"kind": "video",
-						"category": "couples",
-						"categoryLabel": "Couples"
+						"category": "couples"
 					}
 				]
 			}

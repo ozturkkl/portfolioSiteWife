@@ -45,23 +45,28 @@ function slugify(remotePath) {
 		.slice(0, 96);
 }
 
-function categoryId(folderName) {
-	const match = folderName.match(/^\d+-(.+)$/);
-	return (match?.[1] ?? folderName).toLowerCase().replace(/_/g, '-');
-}
-
-function categoryLabel(folderName) {
-	const match = folderName.match(/^\d+-(.+)$/);
-	const raw = match?.[1] ?? folderName;
-	return raw
-		.split('_')
-		.map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
-		.join(' ');
+function folderName(name) {
+	const parsed = nameFromNumberedPrefix(name);
+	return (parsed ?? name).toLowerCase();
 }
 
 function altFromFilename(filename, context) {
 	const base = filename.replace(/\.[^.]+$/, '').replace(/\s+copy(\s+\d+)?/gi, '');
 	return `${context} — ${base}`;
+}
+
+/** e.g. "3-First dance" → "First dance"; "4" → undefined */
+function nameFromNumberedPrefix(name) {
+	const base = name.replace(/\.[^.]+$/i, '').replace(/\s+copy(\s+\d+)?/gi, '');
+	const match = base.match(/^\d+-(.+)$/);
+	if (!match) return undefined;
+
+	const formatted = match[1].replace(/_/g, ' ').trim();
+	return formatted || undefined;
+}
+
+function captionFromFilename(filename) {
+	return nameFromNumberedPrefix(filename);
 }
 
 function isImage(name, contentType) {
@@ -251,14 +256,16 @@ async function syncVideo(remotePath, outputPath, maxWidth, alt) {
 async function syncMedia(entry, outputPath, maxWidth, alt) {
 	const { path: remotePath, contentType, name } = entry;
 	try {
+		let asset;
 		if (isVideo(name, contentType)) {
-			return await syncVideo(remotePath, outputPath, maxWidth, alt);
+			asset = await syncVideo(remotePath, outputPath, maxWidth, alt);
+		} else if (isImage(name, contentType)) {
+			asset = await syncImage(remotePath, outputPath, maxWidth, alt);
+		} else {
+			warnSkip(remotePath, 'unsupported type');
+			return null;
 		}
-		if (isImage(name, contentType)) {
-			return await syncImage(remotePath, outputPath, maxWidth, alt);
-		}
-		warnSkip(remotePath, 'unsupported type');
-		return null;
+		return { ...asset, caption: captionFromFilename(name) };
 	} catch (err) {
 		warnSkip(remotePath, err instanceof Error ? err.message : String(err));
 		return null;
@@ -294,12 +301,16 @@ async function syncMediaBatch(entries, outputDir, maxWidth, altContext, meta = {
 }
 
 function coupleLabel(folderName) {
+	const name = nameFromNumberedPrefix(folderName);
+	if (name) return name;
+
 	const n = Number.parseInt(folderName, 10);
 	if (!Number.isNaN(n)) return `Couple ${n + 1}`;
+
 	return folderName;
 }
 
-async function syncCouplesCategory(catDir, idIndex) {
+async function syncCouplesCategory(catDir, idIndex, category) {
 	const entries = await listDirectory(catDir.path);
 	const coupleDirs = entries
 		.filter((e) => e.isDirectory && e.name.toUpperCase() !== 'SLIDER')
@@ -331,8 +342,7 @@ async function syncCouplesCategory(catDir, idIndex) {
 				gridMedia.push({
 					id: `g-${idIndex.start++}`,
 					...asset,
-					category: 'couples',
-					categoryLabel: 'Couples'
+					category
 				});
 				process.stdout.write(asset.kind === 'video' ? 'v' : '.');
 			}
@@ -366,21 +376,17 @@ async function syncPortfolio() {
 		.filter((e) => e.isDirectory)
 		.sort((a, b) => naturalCompare(a.name, b.name));
 
-	const categories = categoryDirs.map((d) => ({
-		id: categoryId(d.name),
-		label: categoryLabel(d.name)
-	}));
+	const categories = categoryDirs.map((d) => folderName(d.name));
 
 	const media = [];
 	const couples = [];
 	const idIndex = { start: 1 };
 
 	for (const catDir of categoryDirs) {
-		const id = categoryId(catDir.name);
-		const label = categoryLabel(catDir.name);
+		const category = folderName(catDir.name);
 
-		if (id === 'couples') {
-			couples.push(...(await syncCouplesCategory(catDir, idIndex)));
+		if (category === 'couples') {
+			couples.push(...(await syncCouplesCategory(catDir, idIndex, category)));
 			continue;
 		}
 
@@ -394,14 +400,13 @@ async function syncPortfolio() {
 				entry,
 				out,
 				sizes.thumb,
-				altFromFilename(filename, label)
+				altFromFilename(filename, category)
 			);
 			if (asset) {
 				media.push({
 					id: `g-${idIndex.start++}`,
 					...asset,
-					category: id,
-					categoryLabel: label
+					category
 				});
 				process.stdout.write(asset.kind === 'video' ? 'v' : '.');
 			}

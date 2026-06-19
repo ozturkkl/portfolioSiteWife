@@ -8,7 +8,7 @@
 	import { pageTitle } from '$lib/data/site';
 
 	const categories = media.portfolio.categories;
-	const defaultCategory = categories[0]?.id ?? '';
+	const defaultCategory = categories[0] ?? '';
 
 	const couplesCategory = $derived.by(() => {
 		for (const section of media.portfolio.couples) {
@@ -29,8 +29,8 @@
 		couplesCategory !== undefined && activeCategory === couplesCategory
 	);
 
-	function selectCategory(id: string) {
-		activeCategory = id;
+	function selectCategory(category: string) {
+		activeCategory = category;
 	}
 
 	function handleFilterKeydown(event: KeyboardEvent) {
@@ -49,7 +49,7 @@
 
 		if (!nextCategory) return;
 
-		selectCategory(nextCategory.id);
+		selectCategory(nextCategory);
 		(buttons[nextIndex] as HTMLButtonElement).focus();
 	}
 </script>
@@ -70,16 +70,16 @@
 		role="toolbar"
 		aria-label="Filter gallery by category"
 	>
-		{#each categories as category (category.id)}
+		{#each categories as category (category)}
 			<Button
 				variant="tab"
 				type="button"
-				active={activeCategory === category.id}
-				aria-pressed={activeCategory === category.id}
-				onclick={() => selectCategory(category.id)}
+				active={activeCategory === category}
+				aria-pressed={activeCategory === category}
+				onclick={() => selectCategory(category)}
 				onkeydown={handleFilterKeydown}
 			>
-				{category.label}
+				{category}
 			</Button>
 		{/each}
 	</div>

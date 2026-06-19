@@ -5,10 +5,12 @@
 
 	let {
 		asset,
-		class: className = ''
+		class: className = '',
+		fit = 'cover'
 	}: {
 		asset: MediaAsset;
 		class?: string;
+		fit?: 'cover' | 'contain';
 	} = $props();
 </script>
 
@@ -18,7 +20,7 @@
 		alt={asset.alt}
 		width={asset.width}
 		height={asset.height}
-		class="h-full w-full object-cover"
+		class={['h-full w-full', fit === 'contain' ? 'object-contain' : 'object-cover']}
 		loading="lazy"
 		draggable="false"
 	/>

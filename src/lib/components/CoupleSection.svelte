@@ -9,11 +9,14 @@
 <section class="mb-20 last:mb-0">
 	<h2 class="heading-section mb-8 text-center">{couple.label}</h2>
 
-	{#if couple.slider?.length}
-		<PhotoSlider assets={couple.slider} class="mb-10" />
+	{#if couple.media.length > 0}
+		<GalleryGrid assets={couple.media} lightbox />
 	{/if}
 
-	{#if couple.media.length > 0}
-		<GalleryGrid assets={couple.media} lightbox showCategory={false} />
+	{#if couple.slider?.length}
+		<PhotoSlider
+			assets={couple.slider}
+			class={couple.media.length > 0 ? 'mt-4 sm:mt-5' : ''}
+		/>
 	{/if}
 </section>

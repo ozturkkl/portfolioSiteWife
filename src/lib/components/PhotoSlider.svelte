@@ -36,14 +36,17 @@
 
 {#if assets.length > 0}
 	<div class={['relative', className]}>
-		<div class="photo-frame aspect-3/2 overflow-hidden">
+		<div class="photo-frame aspect-3/2 overflow-hidden bg-cream-dark">
 			<button
 				type="button"
-				class={['block h-full w-full', isVideo(current) ? 'cursor-pointer' : 'cursor-zoom-in']}
+				class={[
+					'flex h-full w-full items-center justify-center',
+					isVideo(current) ? 'cursor-pointer' : 'cursor-zoom-in'
+				]}
 				onclick={openLightbox}
 				aria-label={viewLabel(current)}
 			>
-				<MediaThumb asset={current} class="h-full transition-opacity duration-300" />
+				<MediaThumb asset={current} fit="contain" class="h-full w-full" />
 			</button>
 		</div>
 
@@ -52,8 +55,8 @@
 				type="button"
 				class="absolute top-1/2 left-3 z-10 -translate-y-1/2 rounded-site bg-black/40 px-2 py-3 text-2xl leading-none text-white transition-colors hover:bg-black/60"
 				aria-label="Previous slide"
-				onclick={(e) => {
-					e.stopPropagation();
+				onclick={(event) => {
+					event.stopPropagation();
 					prev();
 				}}
 			>
@@ -63,8 +66,8 @@
 				type="button"
 				class="absolute top-1/2 right-3 z-10 -translate-y-1/2 rounded-site bg-black/40 px-2 py-3 text-2xl leading-none text-white transition-colors hover:bg-black/60"
 				aria-label="Next slide"
-				onclick={(e) => {
-					e.stopPropagation();
+				onclick={(event) => {
+					event.stopPropagation();
 					next();
 				}}
 			>

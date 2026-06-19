@@ -8,7 +8,7 @@
 </script>
 
 <section class="bg-cream px-6 sm:px-8">
-	<GalleryGrid {assets} showCategory={false} lightbox />
+	<GalleryGrid {assets} lightbox />
 
 	<div class="py-12 text-center">
 		<Button href={resolve('/portfolio')} variant="ghost">View portfolio</Button>

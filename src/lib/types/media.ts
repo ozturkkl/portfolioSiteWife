@@ -7,17 +7,12 @@ export type MediaAsset = {
 	width: number;
 	height: number;
 	kind: MediaKind;
-};
-
-export type GalleryCategory = {
-	id: string;
-	label: string;
+	caption?: string;
 };
 
 export type GalleryMedia = MediaAsset & {
 	id: string;
 	category: string;
-	categoryLabel: string;
 };
 
 export type CoupleSection = {
@@ -28,7 +23,7 @@ export type CoupleSection = {
 };
 
 export type PortfolioContent = {
-	categories: GalleryCategory[];
+	categories: string[];
 	media: GalleryMedia[];
 	couples: CoupleSection[];
 };
