@@ -1,15 +1,20 @@
 <script lang="ts">
+	import CarouselEdgeButton from '$lib/components/CarouselEdgeButton.svelte';
 	import SwipeCarousel from '$lib/components/SwipeCarousel.svelte';
 	import type { MediaAsset } from '$lib/types/media';
 	import { isVideo } from '$lib/types/media';
+	import { carouselEdgeInset, lightboxEdgeChrome } from '$lib/utils/carousel-edge';
 	import { staticSrc } from '$lib/utils/static-src';
+	import { isVideoControlInteraction, modIndex } from '$lib/utils/swipe-carousel';
 
 	let {
 		assets = [],
+		openingIndex = 0,
 		index = $bindable(0),
 		onclose
 	}: {
 		assets: MediaAsset[];
+		openingIndex?: number;
 		index?: number;
 		onclose: () => void;
 	} = $props();
@@ -17,9 +22,18 @@
 	let dialog = $state<HTMLDialogElement | null>(null);
 	let carousel = $state<SwipeCarousel | null>(null);
 	let imageFailed = $state<Record<number, boolean>>({});
+	let wasClosed = $state(true);
 
 	const isOpen = $derived(assets.length > 0);
 	const multiple = $derived(assets.length > 1);
+
+	$effect(() => {
+		const hasAssets = assets.length > 0;
+		if (hasAssets && wasClosed) {
+			index = modIndex(openingIndex, assets.length);
+		}
+		wasClosed = !hasAssets;
+	});
 
 	$effect(() => {
 		if (!dialog) return;
@@ -76,6 +90,21 @@
 		dialog?.close();
 	}
 
+	function handleCarouselTap(event: PointerEvent) {
+		const target = document.elementFromPoint(event.clientX, event.clientY);
+		if (target?.closest('button')) return;
+
+		const video = target?.closest('video');
+		if (video instanceof HTMLVideoElement) {
+			if (isVideoControlInteraction(event)) return;
+			if (video.paused) video.play().catch(() => {});
+			else video.pause();
+			return;
+		}
+
+		close();
+	}
+
 	function handleBackdropClick(event: MouseEvent) {
 		if (event.target === dialog) close();
 	}
@@ -84,24 +113,24 @@
 		imageFailed = { ...imageFailed, [assetIndex]: true };
 	}
 
-	function handleKeydown(event: KeyboardEvent) {
-		if (!isOpen) return;
-
-		if (event.key === 'ArrowLeft' && multiple) {
-			event.preventDefault();
-			carousel?.goPrev();
-		} else if (event.key === 'ArrowRight' && multiple) {
-			event.preventDefault();
-			carousel?.goNext();
-		}
-	}
-
 	function prev() {
 		carousel?.goPrev();
 	}
 
 	function next() {
 		carousel?.goNext();
+	}
+
+	function handleKeydown(event: KeyboardEvent) {
+		if (!isOpen || !multiple) return;
+
+		if (event.key === 'ArrowLeft') {
+			event.preventDefault();
+			prev();
+		} else if (event.key === 'ArrowRight') {
+			event.preventDefault();
+			next();
+		}
 	}
 </script>
 
@@ -117,69 +146,57 @@
 	{#if isOpen}
 		<button
 			type="button"
-			class="absolute top-4 right-4 z-10 cursor-pointer text-3xl leading-none text-white/80 transition-colors hover:text-white"
+			class={[
+				'absolute top-0 right-0 z-30 grid h-20 w-20 place-items-center sm:h-24 sm:w-24',
+				lightboxEdgeChrome
+			]}
 			aria-label="Close"
 			onclick={(e) => {
 				e.stopPropagation();
 				close();
 			}}
 		>
-			×
+			<svg
+				class="size-8 shrink-0"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.5"
+				stroke-linecap="round"
+				aria-hidden="true"
+			>
+				<path d="M6 6l12 12M18 6 6 18" />
+			</svg>
 		</button>
 
+		{#if multiple}
+			<CarouselEdgeButton direction="prev" variant="lightbox" scope="viewport" onclick={prev} />
+			<CarouselEdgeButton direction="next" variant="lightbox" scope="viewport" onclick={next} />
+		{/if}
+
 		<div
-			class="relative flex h-full w-full items-center justify-center p-4 sm:p-8"
+			class={['relative h-full w-full', multiple ? carouselEdgeInset : 'px-0 sm:px-8']}
 			role="presentation"
-			onclick={(e) => e.stopPropagation()}
 			onkeydown={(e) => e.stopPropagation()}
 		>
+			<SwipeCarousel
+				bind:this={carousel}
+				count={assets.length}
+				bind:index
+				{slide}
+				ontap={handleCarouselTap}
+				class="h-full w-full"
+			/>
 			{#if multiple}
-				<SwipeCarousel
-					bind:this={carousel}
-					count={assets.length}
-					bind:index
-					{slide}
-					class="h-full w-full max-h-[90vh] max-w-full"
-				/>
-				<button
-					type="button"
-					tabindex={-1}
-					class="absolute top-1/2 left-3 z-10 -translate-y-1/2 rounded-site bg-black/40 px-2 py-3 text-2xl leading-none text-white transition-colors hover:bg-black/60"
-					aria-label="Previous slide"
-					onclick={(event) => {
-						event.stopPropagation();
-						prev();
-					}}
-				>
-					‹
-				</button>
-				<button
-					type="button"
-					tabindex={-1}
-					class="absolute top-1/2 right-3 z-10 -translate-y-1/2 rounded-site bg-black/40 px-2 py-3 text-2xl leading-none text-white transition-colors hover:bg-black/60"
-					aria-label="Next slide"
-					onclick={(event) => {
-						event.stopPropagation();
-						next();
-					}}
-				>
-					›
-				</button>
 				<p class="text-caption pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70">
 					{index + 1} / {assets.length}
 				</p>
-			{:else}
-				{@render mediaSlide(0)}
 			{/if}
 		</div>
 	{/if}
 </dialog>
 
 {#snippet slide(assetIndex: number)}
-	{@render mediaSlide(assetIndex)}
-{/snippet}
-
-{#snippet mediaSlide(assetIndex: number)}
 	{@const asset = assets[assetIndex]}
 	<div
 		data-slide-index={assetIndex}
@@ -190,7 +207,7 @@
 				<img
 					src={staticSrc(asset.src)}
 					alt={asset.alt}
-					class="max-h-[90vh] max-w-full object-contain"
+					class="max-h-full max-w-full cursor-zoom-out object-contain"
 					decoding="async"
 					draggable="false"
 				/>
@@ -199,7 +216,7 @@
 				<!-- svelte-ignore a11y_media_has_caption -->
 				<video
 					src={asset.fullSrc}
-					class="max-h-[90vh] max-w-full"
+					class="max-h-full max-w-full"
 					controls
 					playsinline
 					preload="metadata"
@@ -211,7 +228,7 @@
 			<img
 				src={imageFailed[assetIndex] ? staticSrc(asset.src) : asset.fullSrc}
 				alt={asset.alt}
-				class="max-h-[90vh] max-w-full object-contain"
+				class="max-h-full max-w-full cursor-zoom-out object-contain"
 				decoding="async"
 				draggable="false"
 				onerror={() => handleImageError(assetIndex)}

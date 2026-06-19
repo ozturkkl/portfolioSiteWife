@@ -121,7 +121,7 @@
 {#if lightbox && !onOpenLightbox}
 	<Lightbox
 		assets={activeIndex !== null ? (assets as MediaAsset[]) : []}
-		index={activeIndex ?? 0}
+		openingIndex={activeIndex ?? 0}
 		onclose={() => (activeIndex = null)}
 	/>
 {/if}

@@ -1,7 +1,9 @@
 <script lang="ts">
+	import CarouselEdgeButton from '$lib/components/CarouselEdgeButton.svelte';
 	import Lightbox from '$lib/components/Lightbox.svelte';
 	import MediaThumb from '$lib/components/MediaThumb.svelte';
 	import SwipeCarousel from '$lib/components/SwipeCarousel.svelte';
+	import { carouselEdgeInset } from '$lib/utils/carousel-edge';
 	import type { MediaAsset } from '$lib/types/media';
 	import { isVideo } from '$lib/types/media';
 
@@ -62,6 +64,7 @@
 	<div
 		class={[
 			'flex h-full w-full items-center justify-center',
+			carouselEdgeInset,
 			isVideo(asset) ? 'cursor-pointer' : 'cursor-zoom-in'
 		]}
 	>
@@ -81,7 +84,7 @@
 		tabindex={assets.length > 1 ? 0 : undefined}
 		onkeydown={assets.length > 1 ? handleKeydown : undefined}
 	>
-		<div class="photo-frame aspect-3/2 overflow-hidden bg-cream-dark">
+		<div class="photo-frame relative aspect-3/2 overflow-hidden bg-cream-dark">
 			{#if assets.length > 1}
 				<SwipeCarousel
 					bind:this={carousel}
@@ -91,6 +94,8 @@
 					ontap={openLightbox}
 					class="h-full"
 				/>
+				<CarouselEdgeButton direction="prev" onclick={prev} />
+				<CarouselEdgeButton direction="next" onclick={next} />
 			{:else}
 				<button
 					type="button"
@@ -107,30 +112,6 @@
 		</div>
 
 		{#if assets.length > 1}
-			<button
-				type="button"
-				tabindex={-1}
-				class="absolute top-1/2 left-3 z-10 -translate-y-1/2 rounded-site bg-black/40 px-2 py-3 text-2xl leading-none text-white transition-colors hover:bg-black/60"
-				aria-label="Previous slide"
-				onclick={(event) => {
-					event.stopPropagation();
-					prev();
-				}}
-			>
-				‹
-			</button>
-			<button
-				type="button"
-				tabindex={-1}
-				class="absolute top-1/2 right-3 z-10 -translate-y-1/2 rounded-site bg-black/40 px-2 py-3 text-2xl leading-none text-white transition-colors hover:bg-black/60"
-				aria-label="Next slide"
-				onclick={(event) => {
-					event.stopPropagation();
-					next();
-				}}
-			>
-				›
-			</button>
 			<p class="text-caption mt-3 text-center text-ink-muted">
 				{index + 1} / {assets.length}
 			</p>
@@ -139,5 +120,10 @@
 {/if}
 
 {#if !onOpenLightbox}
-	<Lightbox assets={lightboxOpen ? assets : []} bind:index onclose={() => (lightboxOpen = false)} />
+	<Lightbox
+		assets={lightboxOpen ? assets : []}
+		openingIndex={index}
+		bind:index
+		onclose={() => (lightboxOpen = false)}
+	/>
 {/if}

@@ -110,14 +110,16 @@ export function scrollFraction(scrollIndex: number): number {
 	return scrollIndex - Math.floor(scrollIndex);
 }
 
-export function preserveScrollIndex(scrollIndex: number, oldIndex: number, newIndex: number): number {
-	return newIndex + (scrollIndex - oldIndex);
-}
-
-export function displacementFromIndex(scrollIndex: number, index: number, width: number): number {
-	return (scrollIndex - index) * width;
-}
-
 export function easeOutCubic(t: number): number {
 	return 1 - (1 - t) ** 3;
+}
+
+/** True when a pointer event is in a video's native control bar (bottom strip). */
+export function isVideoControlInteraction(event: PointerEvent, controlBarHeight = 48): boolean {
+	const hit = document.elementFromPoint(event.clientX, event.clientY);
+	const video = hit?.closest('video');
+	if (!(video instanceof HTMLVideoElement)) return false;
+
+	const rect = video.getBoundingClientRect();
+	return event.clientY >= rect.bottom - controlBarHeight;
 }

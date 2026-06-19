@@ -42,7 +42,7 @@
 {#if hasSlider}
 	<Lightbox
 		assets={lightboxIndex !== null ? allAssets : []}
-		index={lightboxIndex ?? 0}
+		openingIndex={lightboxIndex ?? 0}
 		onclose={() => (lightboxIndex = null)}
 	/>
 {/if}

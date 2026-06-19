@@ -12,6 +12,7 @@
 		SWIPE_DRAG_PX,
 		SWIPE_LOCK_PX,
 		swipeDurationMs,
+		isVideoControlInteraction,
 		type PointerSample,
 		type SwipeIntent
 	} from '$lib/utils/swipe-carousel';
@@ -27,7 +28,7 @@
 		count: number;
 		index?: number;
 		slide: Snippet<[number]>;
-		ontap?: () => void;
+		ontap?: (event: PointerEvent) => void;
 		class?: string;
 		disabled?: boolean;
 	} = $props();
@@ -88,8 +89,9 @@
 	}
 
 	function releasePointer(event: PointerEvent) {
-		if (activePointerId !== event.pointerId || !track) return;
-		track.releasePointerCapture(event.pointerId);
+		if (activePointerId !== event.pointerId) return;
+		track?.releasePointerCapture(event.pointerId);
+		viewport?.releasePointerCapture(event.pointerId);
 		activePointerId = null;
 	}
 
@@ -164,8 +166,22 @@
 	}
 
 	function handlePointerDown(event: PointerEvent) {
-		if (!canSwipe || width <= 0) return;
 		if (event.pointerType === 'mouse' && event.button !== 0) return;
+		if (isVideoControlInteraction(event)) return;
+
+		if (!canSwipe) {
+			if (!ontap) return;
+
+			isDragging = true;
+			dragged = false;
+			startX = event.clientX;
+			startY = event.clientY;
+			activePointerId = event.pointerId;
+			viewport?.setPointerCapture(event.pointerId);
+			return;
+		}
+
+		if (width <= 0) return;
 
 		cancelAnimation();
 
@@ -182,6 +198,13 @@
 
 	function handlePointerMove(event: PointerEvent) {
 		if (!isDragging || activePointerId !== event.pointerId) return;
+
+		if (!canSwipe) {
+			const dx = event.clientX - startX;
+			const dy = event.clientY - startY;
+			if (Math.abs(dx) > SWIPE_DRAG_PX || Math.abs(dy) > SWIPE_DRAG_PX) dragged = true;
+			return;
+		}
 
 		const dx = event.clientX - startX;
 		const dy = event.clientY - startY;
@@ -208,6 +231,13 @@
 	function handlePointerUp(event: PointerEvent) {
 		if (!isDragging || activePointerId !== event.pointerId) return;
 
+		if (!canSwipe) {
+			releasePointer(event);
+			if (!dragged) ontap?.(event);
+			resetGesture();
+			return;
+		}
+
 		releasePointer(event);
 
 		if (axisLock === 'x') {
@@ -220,7 +250,7 @@
 			});
 			goToIndex(resolveTargetIndex(intent), velocity);
 		} else if (!dragged) {
-			ontap?.();
+			ontap?.(event);
 		}
 
 		resetGesture();
@@ -275,7 +305,14 @@
 			</div>
 		</div>
 	{:else}
-		<div class="h-full w-full">
+		<div
+			role="presentation"
+			class="h-full w-full"
+			onpointerdown={ontap ? handlePointerDown : undefined}
+			onpointermove={ontap ? handlePointerMove : undefined}
+			onpointerup={ontap ? handlePointerUp : undefined}
+			onpointercancel={ontap ? handlePointerCancel : undefined}
+		>
 			{@render slide(index)}
 		</div>
 	{/if}
