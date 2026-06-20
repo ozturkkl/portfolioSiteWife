@@ -43,7 +43,7 @@
 			</a>
 		</div>
 	{:else}
-		<div class="grid gap-16 lg:grid-cols-2">
+		<div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
 			<form class="space-y-6" onsubmit={handleSubmit}>
 				<div>
 					<label for="name" class="label">Name</label>

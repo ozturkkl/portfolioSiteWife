@@ -19,8 +19,8 @@
 	}
 </script>
 
-<section class="mb-20 last:mb-0">
-	<h2 class="heading-section mb-8 text-center">{couple.label}</h2>
+<section class="mb-10 last:mb-0 md:mb-20">
+	<h2 class="heading-section mb-6 text-center md:mb-8">{couple.label}</h2>
 
 	{#if couple.media.length > 0}
 		<GalleryGrid

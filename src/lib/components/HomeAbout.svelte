@@ -9,7 +9,7 @@
 <section class="bg-cream section-padding">
 	<div class="container-narrow">
 		<div
-			class="grid items-center gap-10 md:grid-cols-[auto_1fr] md:gap-12 lg:gap-16"
+			class="grid items-center gap-8 md:grid-cols-[auto_1fr] md:gap-12 lg:gap-16"
 		>
 			<Portrait {asset} class="mx-auto md:mx-0" />
 			<div class="max-w-xl md:max-w-none">

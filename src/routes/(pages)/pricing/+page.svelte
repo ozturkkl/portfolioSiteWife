@@ -18,7 +18,7 @@
 
 	<PricingCarousel class="bleed-gutter" />
 
-	<p class="text-body-muted mx-auto mt-16 max-w-3xl text-center">
+	<p class="text-body-muted mx-auto mt-8 max-w-3xl text-center md:mt-16">
 		Custom packages available for elopements and commercial work.
 		<a href={resolve('/contact')} class="link-accent">Get in touch</a>
 		to discuss your vision.

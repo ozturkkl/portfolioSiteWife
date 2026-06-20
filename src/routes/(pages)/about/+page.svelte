@@ -15,7 +15,7 @@
 <PageContainer>
 	<SectionHeading title={site.about.greeting} />
 
-	<div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+	<div class="grid items-center gap-8 md:gap-10 lg:grid-cols-2 lg:gap-16">
 		<div class="photo-frame mx-auto w-full max-w-72 sm:max-w-80 lg:mx-0 lg:max-w-none">
 			<img
 				src={staticSrc(media.about.src)}

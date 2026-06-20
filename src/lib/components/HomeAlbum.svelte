@@ -10,7 +10,7 @@
 <section class="bg-cream px-6 sm:px-8">
 	<GalleryGrid {assets} lightbox />
 
-	<div class="py-12 text-center">
+	<div class="py-8 text-center md:py-12">
 		<Button href={resolve('/portfolio')} variant="ghost">View portfolio</Button>
 	</div>
 </section>

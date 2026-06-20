@@ -78,7 +78,7 @@
 	}
 
 	.heading-section {
-		@apply font-serif text-4xl font-light tracking-wide text-ink md:text-5xl lg:text-6xl;
+		@apply font-serif text-3xl font-light tracking-wide text-ink md:text-5xl lg:text-6xl;
 	}
 
 	.heading-card {

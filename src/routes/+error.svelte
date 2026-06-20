@@ -17,13 +17,13 @@
 
 <section class="page-section site-gutter flex flex-1 items-center">
 	<PageContainer width="narrow">
-		<div class="py-12 text-center">
+		<div class="py-8 text-center md:py-12">
 			<p class="eyebrow">{status}</p>
 			<h1 class="heading-page mt-4">
 				{status === 404 ? 'Page not found' : 'Something went wrong'}
 			</h1>
 			<p class="text-body-muted mx-auto mt-4 max-w-md">{message}</p>
-			<div class="mt-8">
+			<div class="mt-6 md:mt-8">
 				<Button href={resolve('/')} variant="ghost">Back to home</Button>
 			</div>
 		</div>
