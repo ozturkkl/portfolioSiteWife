@@ -3,15 +3,19 @@
 	import Button from '$lib/components/ui/Button.svelte';
 	import type { PricingPackage } from '$lib/data/pricing';
 
-	let { pkg }: { pkg: PricingPackage } = $props();
+	let {
+		pkg,
+		active = false
+	}: {
+		pkg: PricingPackage;
+		active?: boolean;
+	} = $props();
 </script>
 
 <article
 	class={[
-		'rounded-site flex flex-col border p-8 transition-shadow hover:shadow-lg md:p-10',
-		pkg.highlighted
-			? 'border-accent bg-white shadow-md'
-			: 'border-ink/20 bg-cream/50'
+		'rounded-site flex h-full flex-col border p-8 transition-[border-color,box-shadow,opacity,transform] duration-300 md:p-10',
+		active ? 'border-accent bg-white shadow-md' : 'border-ink/20 bg-cream/50'
 	]}
 >
 	<h3 class="heading-card">{pkg.name}</h3>

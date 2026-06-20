@@ -5,7 +5,7 @@
 	import { isVideo } from '$lib/types/media';
 	import { lightboxEdgeChrome } from '$lib/utils/carousel-edge';
 	import { staticSrc } from '$lib/utils/static-src';
-	import { isVideoControlInteraction, modIndex } from '$lib/utils/swipe-carousel';
+	import { isVideoControlInteraction, modIndex } from '$lib/utils/carousel';
 
 	let {
 		assets = [],

@@ -4,51 +4,45 @@ export type PricingPackage = {
 	price: string;
 	description: string;
 	features: string[];
-	highlighted?: boolean;
 };
 
 export const pricingPackages: PricingPackage[] = [
 	{
-		id: 'mini',
-		name: 'Mini Session',
+		id: 'wedding',
+		name: 'Wedding',
+		price: '$1,500',
+		description: 'Full coverage for your wedding day, from preparation to celebration.',
+		features: ['6 hours of coverage', '200–300 edited photos', '3-week delivery']
+	},
+	{
+		id: 'engagement',
+		name: 'Engagement',
+		price: '$800',
+		description: 'Celebrate the in-between — portraits before the big day.',
+		features: ['3–4 hours of coverage', '170–200 edited photos', '2-week delivery']
+	},
+	{
+		id: 'couple',
+		name: 'Couple',
 		price: '$350',
-		description: 'Perfect for a quick refresh or milestone moment.',
+		description: 'Intimate portraits, just the two of you.',
 		features: [
-			'30-minute session',
-			'1 location',
-			'15 edited digital images',
-			'Online gallery',
-			'2-week delivery'
+			'1–1.5 hours of coverage',
+			'70–100 edited photos',
+			'1-week delivery',
+			'I can suggest locations'
 		]
 	},
 	{
-		id: 'standard',
-		name: 'Standard Session',
-		price: '$650',
-		description: 'Our most popular package for couples and families.',
+		id: 'family',
+		name: 'Family',
+		price: '$300',
+		description: 'Timeless portraits with the people you love most.',
 		features: [
-			'1-hour session',
-			'Up to 2 locations',
-			'40 edited digital images',
-			'Online gallery',
-			'Print release',
-			'2-week delivery'
-		],
-		highlighted: true
-	},
-	{
-		id: 'premium',
-		name: 'Premium Experience',
-		price: '$1,200',
-		description: 'An immersive session with extra time and deliverables.',
-		features: [
-			'2-hour session',
-			'Up to 3 locations',
-			'75+ edited digital images',
-			'Online gallery',
-			'Print release',
-			'10 fine-art prints',
-			'1-week priority delivery'
+			'1 hour of coverage',
+			'50–70 edited photos',
+			'1-week delivery',
+			'I can suggest locations'
 		]
 	}
 ];

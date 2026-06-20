@@ -92,6 +92,11 @@ export function modIndex(value: number, count: number): number {
 	return ((value % count) + count) % count;
 }
 
+export function clampIndex(index: number, count: number): number {
+	if (count <= 0) return 0;
+	return Math.max(0, Math.min(count - 1, index));
+}
+
 /** Shortest scroll delta in slide units, using wrap only when linear path is longer than half the track. */
 export function scrollAnimationDelta(
 	scrollIndex: number,
@@ -112,6 +117,102 @@ export function scrollFraction(scrollIndex: number): number {
 
 export function easeOutCubic(t: number): number {
 	return 1 - (1 - t) ** 3;
+}
+
+/** Full-bleed track offset for a fractional scroll index (one slide = viewport width). */
+export function fullBleedTranslateX(scrollIndex: number, viewportWidth: number): number {
+	return -viewportWidth + -scrollFraction(scrollIndex) * viewportWidth;
+}
+
+/** Layout for a peek carousel with fixed-width cards centered in the viewport. */
+export function peekCarouselLayout(params: {
+	viewportWidth: number;
+	cardPx: number;
+	gap: number;
+	index: number;
+	count: number;
+}) {
+	const { viewportWidth, cardPx, gap, index, count } = params;
+	const stride = cardPx + gap;
+	const sidePad = viewportWidth > 0 ? (viewportWidth - cardPx) / 2 : 0;
+	const trackWidth = count * cardPx + (count - 1) * gap;
+	const targetOffset =
+		viewportWidth > 0 ? viewportWidth / 2 - (sidePad + index * stride + cardPx / 2) : 0;
+
+	return { sidePad, stride, trackWidth, targetOffset };
+}
+
+/** Rubber-band drag past the first or last slide. */
+export function boundedDragOffset(
+	dx: number,
+	atStart: boolean,
+	atEnd: boolean,
+	factor = 0.25
+): number {
+	if (atStart && dx > 0) return dx * factor;
+	if (atEnd && dx < 0) return dx * factor;
+	return dx;
+}
+
+export function animateCarouselValue(params: {
+	from: number;
+	to: number;
+	velocity: number;
+	onUpdate: (value: number) => void;
+	onComplete?: () => void;
+	shouldCancel?: () => boolean;
+	fallbackDuration?: number;
+}): () => void {
+	const {
+		from,
+		to,
+		velocity,
+		onUpdate,
+		onComplete,
+		shouldCancel,
+		fallbackDuration = 320
+	} = params;
+
+	let animFrame: number | null = null;
+
+	function cancel() {
+		if (animFrame !== null) {
+			cancelAnimationFrame(animFrame);
+			animFrame = null;
+		}
+	}
+
+	const remaining = Math.abs(to - from);
+	if (remaining < 0.5) {
+		onUpdate(to);
+		onComplete?.();
+		return cancel;
+	}
+
+	const duration = swipeDurationMs(remaining, Math.abs(velocity), fallbackDuration);
+	const startTime = performance.now();
+
+	function step(now: number) {
+		if (shouldCancel?.()) {
+			cancel();
+			return;
+		}
+
+		const t = Math.min(1, (now - startTime) / duration);
+		onUpdate(from + (to - from) * easeOutCubic(t));
+
+		if (t < 1) {
+			animFrame = requestAnimationFrame(step);
+			return;
+		}
+
+		onUpdate(to);
+		cancel();
+		onComplete?.();
+	}
+
+	animFrame = requestAnimationFrame(step);
+	return cancel;
 }
 
 /** True when a pointer event is in a video's native control bar (bottom strip). */

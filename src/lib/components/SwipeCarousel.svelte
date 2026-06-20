@@ -11,20 +11,19 @@
 		mediaEdgeHover
 	} from '$lib/utils/carousel-edge';
 	import {
-		easeOutCubic,
+		animateCarouselValue,
+		fullBleedTranslateX,
 		getPointerVelocity,
 		modIndex,
 		pushPointerSample,
 		resolveSwipeIntent,
-		scrollFraction,
 		scrollAnimationDelta,
 		SWIPE_DRAG_PX,
 		SWIPE_LOCK_PX,
-		swipeDurationMs,
 		isVideoControlInteraction,
 		type PointerSample,
 		type SwipeIntent
-	} from '$lib/utils/swipe-carousel';
+	} from '$lib/utils/carousel';
 
 	let {
 		count,
@@ -67,7 +66,7 @@
 	let samples: PointerSample[] = [];
 	let ySamples: PointerSample[] = [];
 	let activePointerId: number | null = null;
-	let animFrame: number | null = null;
+	let cancelAnim: (() => void) | null = null;
 	let hoveredEdge = $state<'prev' | 'next' | null>(null);
 
 	const MOBILE_EDGE_BREAKPOINT = 640;
@@ -79,11 +78,10 @@
 	const stripHoverClass = $derived(edgeVariant === 'lightbox' ? lightboxEdgeHover : mediaEdgeHover);
 	const isLightboxEdge = $derived(showEdgeNav && edgeVariant === 'lightbox');
 	const renderAnchor = $derived(modIndex(Math.floor(scrollIndex), count));
-	const renderOffset = $derived(-scrollFraction(scrollIndex) * width);
 	const prevIndex = $derived(modIndex(renderAnchor - 1, count));
 	const centerIndex = $derived(modIndex(renderAnchor, count));
 	const nextIndex = $derived(modIndex(renderAnchor + 1, count));
-	const translateX = $derived(canSwipe ? -width + renderOffset : 0);
+	const translateX = $derived(canSwipe ? fullBleedTranslateX(scrollIndex, width) : 0);
 
 	$effect(() => {
 		if (!trackArea) return;
@@ -127,10 +125,8 @@
 	}
 
 	function cancelAnimation() {
-		if (animFrame !== null) {
-			cancelAnimationFrame(animFrame);
-			animFrame = null;
-		}
+		cancelAnim?.();
+		cancelAnim = null;
 		isAnimating = false;
 	}
 
@@ -142,38 +138,19 @@
 		onComplete?: () => void
 	) {
 		cancelAnimation();
-
-		const remaining = Math.abs(to - from);
-		if (remaining < 0.5) {
-			onUpdate(to);
-			onComplete?.();
-			return;
-		}
-
 		isAnimating = true;
-		const duration = swipeDurationMs(remaining, Math.abs(velocity));
-		const startTime = performance.now();
-
-		function step(now: number) {
-			if (isDragging) {
-				cancelAnimation();
-				return;
-			}
-
-			const t = Math.min(1, (now - startTime) / duration);
-			onUpdate(from + (to - from) * easeOutCubic(t));
-
-			if (t < 1) {
-				animFrame = requestAnimationFrame(step);
-				return;
-			}
-
-			onUpdate(to);
-			cancelAnimation();
-			onComplete?.();
-		}
-
-		animFrame = requestAnimationFrame(step);
+		cancelAnim = animateCarouselValue({
+			from,
+			to,
+			velocity,
+			onUpdate,
+			onComplete: () => {
+				cancelAnim = null;
+				isAnimating = false;
+				onComplete?.();
+			},
+			shouldCancel: () => isDragging
+		});
 	}
 
 	function startAnimation(velocity = 0) {
