@@ -74,6 +74,7 @@
 	const canSwipe = $derived(count > 1 && !disabled);
 	const showEdgeNav = $derived(edgeNav && canSwipe);
 	const hasPointerHandlers = $derived(canSwipe || !!ontap || !!onswipedown);
+	const trackTouchAction = $derived(onswipedown ? 'none' : canSwipe ? 'pan-y' : 'auto');
 	const stripClass = $derived(edgeVariant === 'lightbox' ? lightboxEdgeChrome : mediaEdgeChrome);
 	const stripHoverClass = $derived(edgeVariant === 'lightbox' ? lightboxEdgeHover : mediaEdgeHover);
 	const isLightboxEdge = $derived(showEdgeNav && edgeVariant === 'lightbox');
@@ -243,7 +244,10 @@
 			goToIndex(modIndex(index + 1, count), 0, false);
 			return;
 		}
-		ontap?.(event);
+		if (ontap) {
+			event.preventDefault();
+			ontap(event);
+		}
 	}
 
 	function resolveDismissIntent(dy: number, velocityY: number): boolean {
@@ -308,7 +312,7 @@
 				onswipedown &&
 				(Math.abs(dx) > SWIPE_LOCK_PX || Math.abs(dy) > SWIPE_LOCK_PX)
 			) {
-				axisLock = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+				axisLock = 'y';
 			}
 
 			if (axisLock === 'y' && onswipedown) {
@@ -358,6 +362,7 @@
 			const velocityY = getPointerVelocity(ySamples);
 			if (resolveDismissIntent(dy, velocityY)) {
 				dragY = 0;
+				event.preventDefault();
 				onswipedown();
 			} else {
 				snapBackY(velocityY);
@@ -408,6 +413,7 @@
 	bind:this={viewport}
 	role="presentation"
 	class={['relative h-full w-full overflow-hidden', className]}
+	style:touch-action={onswipedown ? 'none' : undefined}
 	onpointerdown={hasPointerHandlers ? handlePointerDown : undefined}
 	onpointermove={hasPointerHandlers ? handlePointerMove : undefined}
 	onpointerup={hasPointerHandlers ? handlePointerUp : undefined}
@@ -469,9 +475,10 @@
 		bind:this={trackArea}
 		class={[
 			'h-full w-full',
-			canSwipe ? 'touch-pan-y' : '',
+			canSwipe && !onswipedown ? 'touch-pan-y' : '',
 			isLightboxEdge ? carouselEdgeInset : ''
 		]}
+		style:touch-action={onswipedown ? 'none' : undefined}
 	>
 		{#if canSwipe}
 			<div class="h-full" style:transform="translate3d(0, {dragY}px, 0)">
@@ -485,7 +492,7 @@
 					]}
 					style:transform="translate3d({translateX}px, 0, 0)"
 					style:width="{width * 3}px"
-					style:touch-action="pan-y"
+					style:touch-action={trackTouchAction}
 				>
 					<div class="h-full shrink-0" style:width="{width}px" aria-hidden="true">
 						{@render slide(prevIndex)}

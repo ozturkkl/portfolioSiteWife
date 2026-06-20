@@ -156,6 +156,7 @@
 			aria-label="Close"
 			onclick={(e) => {
 				e.stopPropagation();
+				e.preventDefault();
 				close();
 			}}
 		>
