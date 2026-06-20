@@ -225,9 +225,12 @@
 			{/if}
 		{:else}
 			<ProgressiveFullImage
+				class="min-h-0 w-full self-stretch"
 				src={asset.src}
 				fullSrc={asset.fullSrc}
 				alt={asset.alt}
+				width={asset.width}
+				height={asset.height}
 				fullFailed={imageFailed[assetIndex] ?? false}
 				bind:loadedUrls={fullLoadedUrls}
 				onfullerror={() => handleImageError(assetIndex)}
