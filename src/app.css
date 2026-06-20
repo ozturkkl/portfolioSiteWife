@@ -42,7 +42,7 @@
 	}
 
 	.container-wide {
-		@apply mx-auto max-w-7xl;
+		@apply mx-auto max-w-[95rem];
 	}
 
 	.site-gutter {
