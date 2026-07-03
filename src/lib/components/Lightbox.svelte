@@ -100,17 +100,12 @@
 
 	function handleCarouselTap(event: PointerEvent) {
 		const target = document.elementFromPoint(event.clientX, event.clientY);
-		if (target?.closest('button')) return;
-
 		const video = target?.closest('video');
 		if (video instanceof HTMLVideoElement) {
 			if (isVideoControlInteraction(event)) return;
 			if (video.paused) video.play().catch(() => {});
 			else video.pause();
-			return;
 		}
-
-		close();
 	}
 
 	function handleBackdropClick(event: MouseEvent) {
@@ -146,7 +141,7 @@
 
 <dialog
 	bind:this={dialog}
-	class="lightbox fixed inset-0 z-50 m-0 h-full w-full max-h-none max-w-none cursor-pointer border-0 bg-black/95 p-0 backdrop:bg-black/95 outline-none"
+	class="lightbox fixed inset-0 z-50 m-0 h-full w-full max-h-none max-w-none border-0 bg-black/95 p-0 backdrop:bg-black/95 outline-none"
 	aria-label="Media viewer"
 	onclose={handleDialogClose}
 	onclick={handleBackdropClick}
@@ -210,7 +205,7 @@
 				<img
 					src={staticSrc(asset.src)}
 					alt={asset.alt}
-					class="max-h-full max-w-full cursor-pointer object-contain"
+					class="max-h-full max-w-full object-contain"
 					decoding="async"
 					draggable="false"
 				/>

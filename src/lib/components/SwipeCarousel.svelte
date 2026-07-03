@@ -74,7 +74,7 @@
 	const canSwipe = $derived(count > 1 && !disabled);
 	const showEdgeNav = $derived(edgeNav && canSwipe);
 	const hasPointerHandlers = $derived(canSwipe || !!ontap || !!onswipedown);
-	const trackTouchAction = $derived(onswipedown ? 'none' : canSwipe ? 'pan-y' : 'auto');
+	const trackTouchAction = $derived(onswipedown ? 'pinch-zoom' : canSwipe ? 'pan-y' : 'auto');
 	const stripClass = $derived(edgeVariant === 'lightbox' ? lightboxEdgeChrome : mediaEdgeChrome);
 	const stripHoverClass = $derived(edgeVariant === 'lightbox' ? lightboxEdgeHover : mediaEdgeHover);
 	const isLightboxEdge = $derived(showEdgeNav && edgeVariant === 'lightbox');
@@ -411,7 +411,7 @@
 	bind:this={viewport}
 	role="presentation"
 	class={['relative h-full w-full overflow-hidden', className]}
-	style:touch-action={onswipedown ? 'none' : undefined}
+	style:touch-action={onswipedown ? 'pinch-zoom' : undefined}
 	onpointerdown={hasPointerHandlers ? handlePointerDown : undefined}
 	onpointermove={hasPointerHandlers ? handlePointerMove : undefined}
 	onpointerup={hasPointerHandlers ? handlePointerUp : undefined}
@@ -476,7 +476,7 @@
 			canSwipe && !onswipedown ? 'touch-pan-y' : '',
 			isLightboxEdge ? carouselEdgeInset : ''
 		]}
-		style:touch-action={onswipedown ? 'none' : undefined}
+		style:touch-action={onswipedown ? 'pinch-zoom' : undefined}
 	>
 		{#if canSwipe}
 			<div class="h-full" style:transform="translate3d(0, {dragY}px, 0)">
