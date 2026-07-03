@@ -78,10 +78,8 @@
 	const stripClass = $derived(edgeVariant === 'lightbox' ? lightboxEdgeChrome : mediaEdgeChrome);
 	const stripHoverClass = $derived(edgeVariant === 'lightbox' ? lightboxEdgeHover : mediaEdgeHover);
 	const isLightboxEdge = $derived(showEdgeNav && edgeVariant === 'lightbox');
-	const renderAnchor = $derived(modIndex(Math.floor(scrollIndex), count));
-	const prevIndex = $derived(modIndex(renderAnchor - 1, count));
-	const centerIndex = $derived(modIndex(renderAnchor, count));
-	const nextIndex = $derived(modIndex(renderAnchor + 1, count));
+	const renderAnchor = $derived(Math.floor(scrollIndex));
+	const renderPositions = $derived([renderAnchor - 1, renderAnchor, renderAnchor + 1]);
 	const translateX = $derived(canSwipe ? fullBleedTranslateX(scrollIndex, width) : 0);
 
 	$effect(() => {
@@ -494,15 +492,16 @@
 					style:width="{width * 3}px"
 					style:touch-action={trackTouchAction}
 				>
-					<div class="h-full shrink-0" style:width="{width}px" aria-hidden="true">
-						{@render slide(prevIndex)}
-					</div>
-					<div class="h-full shrink-0" style:width="{width}px">
-						{@render slide(centerIndex)}
-					</div>
-					<div class="h-full shrink-0" style:width="{width}px" aria-hidden="true">
-						{@render slide(nextIndex)}
-					</div>
+					<!-- Slides keyed by unwrapped track position: their DOM survives anchor shifts, since recycling slots would swap video src and reset playback. -->
+					{#each renderPositions as pos (pos)}
+						<div
+							class="h-full shrink-0"
+							style:width="{width}px"
+							aria-hidden={pos !== renderAnchor ? 'true' : undefined}
+						>
+							{@render slide(modIndex(pos, count))}
+						</div>
+					{/each}
 				</div>
 			</div>
 		{:else}

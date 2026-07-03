@@ -65,23 +65,28 @@
 		};
 	});
 
-	$effect(() => {
-		if (!isOpen) return;
-		index;
-		pauseVideos();
-		playCurrentVideo();
-	});
-
 	function pauseVideos() {
 		dialog?.querySelectorAll('video').forEach((video) => video.pause());
 	}
 
-	function playCurrentVideo() {
-		if (!dialog) return;
-		const video = dialog.querySelector(`[data-slide-index="${index}"] video`);
-		if (video instanceof HTMLVideoElement) {
+	// Action instead of an index effect: slides can mount after the index change
+	// (fast swiping), and a mount-time hook is the only reliable way to catch them.
+	function autoplay(video: HTMLVideoElement, active: boolean) {
+		if (active) playVideo(video);
+		return {
+			update(nowActive: boolean) {
+				if (nowActive) playVideo(video);
+				else video.pause();
+			}
+		};
+	}
+
+	function playVideo(video: HTMLVideoElement) {
+		video.play().catch(() => {
+			// Mobile autoplay policies can block unmuted playback; retry muted (controls allow unmuting).
+			video.muted = true;
 			video.play().catch(() => {});
-		}
+		});
 	}
 
 	function handleDialogClose() {
@@ -220,6 +225,7 @@
 					preload="metadata"
 					aria-label={asset.alt}
 					onerror={() => handleImageError(assetIndex)}
+					use:autoplay={assetIndex === index}
 				></video>
 			{/if}
 		{:else}
